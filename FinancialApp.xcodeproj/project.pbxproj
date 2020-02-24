@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27406090240441AF00084C7B /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2740608F240441AF00084C7B /* SplashScreen.storyboard */; };
+		2740609224044ECC00084C7B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740609124044ECC00084C7B /* TabViewController.swift */; };
+		2740609424044FB200084C7B /* ComputeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740609324044FB200084C7B /* ComputeViewController.swift */; };
+		27406096240450EE00084C7B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27406095240450EE00084C7B /* HistoryViewController.swift */; };
+		274060982404510400084C7B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274060972404510400084C7B /* SettingViewController.swift */; };
 		2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */; };
 		2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE122403C7B2009AADC5 /* SplashView.swift */; };
 		2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE142403C7B2009AADC5 /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2740608F240441AF00084C7B /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		2740609124044ECC00084C7B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		2740609324044FB200084C7B /* ComputeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeViewController.swift; sourceTree = "<group>"; };
+		27406095240450EE00084C7B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		274060972404510400084C7B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2791AE0B2403C7B2009AADC5 /* FinancialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2791AE122403C7B2009AADC5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -70,6 +80,7 @@
 			children = (
 				2791AE142403C7B2009AADC5 /* Main.storyboard */,
 				2791AE192403C7C0009AADC5 /* LaunchScreen.storyboard */,
+				2740608F240441AF00084C7B /* SplashScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -78,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				2791AE122403C7B2009AADC5 /* SplashView.swift */,
+				2740609124044ECC00084C7B /* TabViewController.swift */,
+				2740609324044FB200084C7B /* ComputeViewController.swift */,
+				27406095240450EE00084C7B /* HistoryViewController.swift */,
+				274060972404510400084C7B /* SettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2791AE1B2403C7C0009AADC5 /* LaunchScreen.storyboard in Resources */,
+				27406090240441AF00084C7B /* SplashScreen.storyboard in Resources */,
 				2791AE182403C7C0009AADC5 /* Assets.xcassets in Resources */,
 				2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */,
 			);
@@ -167,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2740609224044ECC00084C7B /* TabViewController.swift in Sources */,
+				2740609424044FB200084C7B /* ComputeViewController.swift in Sources */,
 				2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */,
+				27406096240450EE00084C7B /* HistoryViewController.swift in Sources */,
 				2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */,
+				274060982404510400084C7B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
         <!--Computation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Computation" id="BYZ-38-t0r" customClass="ViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Computation" id="BYZ-38-t0r" customClass="ComputeViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1023" y="1645"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="QoS-vU-zTW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qfZ-Jq-sPh" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qfZ-Jq-sPh" customClass="TabViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="roO-EK-CMq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -51,7 +51,7 @@
         <!--History-->
         <scene sceneID="d19-4V-luC">
             <objects>
-                <viewController title="History" id="ntR-4L-71n" sceneMemberID="viewController">
+                <viewController title="History" id="ntR-4L-71n" customClass="HistoryViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v2E-oF-4zi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--SettingsView-->
         <scene sceneID="fuX-K5-a3f">
             <objects>
-                <viewController title="SettingsView" id="wpM-S0-o1h" sceneMemberID="viewController">
+                <viewController title="SettingsView" id="wpM-S0-o1h" customClass="SettingViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XII-i6-DDL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
