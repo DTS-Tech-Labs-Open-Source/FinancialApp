@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplashView.swift
 //  FinancialApp
 //
 //  Created by Dilan Tharidu Sangeeth on 2/24/20.
