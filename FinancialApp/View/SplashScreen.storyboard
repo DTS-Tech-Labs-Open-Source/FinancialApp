@@ -51,10 +51,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x7c-uJ-dpv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bN3-xh-fsr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDh-om-C9S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="130"/>
+            <point key="canvasLocation" x="1055.072463768116" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>

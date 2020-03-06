@@ -12,11 +12,15 @@
 		2740609424044FB200084C7B /* ComputeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740609324044FB200084C7B /* ComputeViewController.swift */; };
 		27406096240450EE00084C7B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27406095240450EE00084C7B /* HistoryViewController.swift */; };
 		274060982404510400084C7B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274060972404510400084C7B /* SettingViewController.swift */; };
+		2745C546240E4DB90048D704 /* HistoryGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */; };
+		2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */; };
 		2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */; };
 		2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE122403C7B2009AADC5 /* SplashView.swift */; };
 		2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE142403C7B2009AADC5 /* Main.storyboard */; };
 		2791AE182403C7C0009AADC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE172403C7C0009AADC5 /* Assets.xcassets */; };
 		2791AE1B2403C7C0009AADC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE192403C7C0009AADC5 /* LaunchScreen.storyboard */; };
+		279508D124077877001E390E /* Compute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279508D024077877001E390E /* Compute.swift */; };
+		279508D424079DF1001E390E /* ComputeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279508D324079DF1001E390E /* ComputeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,8 @@
 		2740609324044FB200084C7B /* ComputeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeViewController.swift; sourceTree = "<group>"; };
 		27406095240450EE00084C7B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		274060972404510400084C7B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGroupCellView.xib; sourceTree = "<group>"; };
+		2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGroupCellViewController.swift; sourceTree = "<group>"; };
 		2791AE0B2403C7B2009AADC5 /* FinancialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2791AE122403C7B2009AADC5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		2791AE172403C7C0009AADC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2791AE1A2403C7C0009AADC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2791AE1C2403C7C0009AADC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279508D024077877001E390E /* Compute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compute.swift; sourceTree = "<group>"; };
+		279508D324079DF1001E390E /* ComputeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2745C544240E4D700048D704 /* HIstoryCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */,
+				2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */,
+			);
+			path = HIstoryCustomCell;
+			sourceTree = "<group>";
+		};
 		2791AE022403C7B2009AADC5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +81,7 @@
 		2791AE0D2403C7B2009AADC5 /* FinancialApp */ = {
 			isa = PBXGroup;
 			children = (
+				279508D224079DD7001E390E /* Helper */,
 				2791AE2524040050009AADC5 /* Services */,
 				2791AE2424040023009AADC5 /* Model */,
 				2791AE2324040010009AADC5 /* Controller */,
@@ -78,6 +96,7 @@
 		2791AE222403FFBF009AADC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				279508D524084FE6001E390E /* CustomCells */,
 				2791AE142403C7B2009AADC5 /* Main.storyboard */,
 				2791AE192403C7C0009AADC5 /* LaunchScreen.storyboard */,
 				2740608F240441AF00084C7B /* SplashScreen.storyboard */,
@@ -100,6 +119,7 @@
 		2791AE2424040023009AADC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				279508D024077877001E390E /* Compute.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +129,22 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		279508D224079DD7001E390E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				279508D324079DF1001E390E /* ComputeViewCell.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		279508D524084FE6001E390E /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				2745C544240E4D700048D704 /* HIstoryCustomCell */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2791AE1B2403C7C0009AADC5 /* LaunchScreen.storyboard in Resources */,
+				2745C546240E4DB90048D704 /* HistoryGroupCellView.xib in Resources */,
 				27406090240441AF00084C7B /* SplashScreen.storyboard in Resources */,
 				2791AE182403C7C0009AADC5 /* Assets.xcassets in Resources */,
 				2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */,
@@ -183,11 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279508D424079DF1001E390E /* ComputeViewCell.swift in Sources */,
 				2740609224044ECC00084C7B /* TabViewController.swift in Sources */,
 				2740609424044FB200084C7B /* ComputeViewController.swift in Sources */,
 				2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */,
+				2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */,
 				27406096240450EE00084C7B /* HistoryViewController.swift in Sources */,
 				2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */,
+				279508D124077877001E390E /* Compute.swift in Sources */,
 				274060982404510400084C7B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
