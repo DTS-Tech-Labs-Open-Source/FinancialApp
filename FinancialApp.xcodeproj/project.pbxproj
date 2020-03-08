@@ -14,6 +14,13 @@
 		274060982404510400084C7B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274060972404510400084C7B /* SettingViewController.swift */; };
 		2745C546240E4DB90048D704 /* HistoryGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */; };
 		2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */; };
+		2767EDB52413A29A00FA84CA /* CompoundLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB42413A29A00FA84CA /* CompoundLoanViewController.swift */; };
+		2767EDB82413E69900FA84CA /* UITextField+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB72413E69900FA84CA /* UITextField+PlaceholderColor.swift */; };
+		2767EDBA2413E6BB00FA84CA /* UITextField+CustomNumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB92413E6BB00FA84CA /* UITextField+CustomNumericKeyboard.swift */; };
+		2767EDBC24146A0D00FA84CA /* SavingComputeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDBB24146A0D00FA84CA /* SavingComputeViewController.swift */; };
+		2767EDBE24146BD900FA84CA /* LoanComputeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDBD24146BD900FA84CA /* LoanComputeViewController.swift */; };
+		2767EDC024146C0000FA84CA /* MortgageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDBF24146C0000FA84CA /* MortgageViewController.swift */; };
+		2767EDC2241471E600FA84CA /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDC1241471E600FA84CA /* ExchangeRateViewController.swift */; };
 		2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */; };
 		2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791AE122403C7B2009AADC5 /* SplashView.swift */; };
 		2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE142403C7B2009AADC5 /* Main.storyboard */; };
@@ -21,6 +28,9 @@
 		2791AE1B2403C7C0009AADC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2791AE192403C7C0009AADC5 /* LaunchScreen.storyboard */; };
 		279508D124077877001E390E /* Compute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279508D024077877001E390E /* Compute.swift */; };
 		279508D424079DF1001E390E /* ComputeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279508D324079DF1001E390E /* ComputeViewCell.swift */; };
+		27B6F22E241287BD00593884 /* CustomNumberPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B6F22D241287BD00593884 /* CustomNumberPad.xib */; };
+		27B6F2302412BBAD00593884 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6F22F2412BBAD00593884 /* RoundButton.swift */; };
+		27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6F2312412DE3F00593884 /* CustomNumberPadController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,13 @@
 		274060972404510400084C7B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGroupCellView.xib; sourceTree = "<group>"; };
 		2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGroupCellViewController.swift; sourceTree = "<group>"; };
+		2767EDB42413A29A00FA84CA /* CompoundLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLoanViewController.swift; sourceTree = "<group>"; };
+		2767EDB72413E69900FA84CA /* UITextField+PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PlaceholderColor.swift"; sourceTree = "<group>"; };
+		2767EDB92413E6BB00FA84CA /* UITextField+CustomNumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+CustomNumericKeyboard.swift"; sourceTree = "<group>"; };
+		2767EDBB24146A0D00FA84CA /* SavingComputeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingComputeViewController.swift; sourceTree = "<group>"; };
+		2767EDBD24146BD900FA84CA /* LoanComputeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanComputeViewController.swift; sourceTree = "<group>"; };
+		2767EDBF24146C0000FA84CA /* MortgageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageViewController.swift; sourceTree = "<group>"; };
+		2767EDC1241471E600FA84CA /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
 		2791AE0B2403C7B2009AADC5 /* FinancialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2791AE0E2403C7B2009AADC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2791AE122403C7B2009AADC5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -40,6 +57,9 @@
 		2791AE1C2403C7C0009AADC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279508D024077877001E390E /* Compute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compute.swift; sourceTree = "<group>"; };
 		279508D324079DF1001E390E /* ComputeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeViewCell.swift; sourceTree = "<group>"; };
+		27B6F22D241287BD00593884 /* CustomNumberPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNumberPad.xib; sourceTree = "<group>"; };
+		27B6F22F2412BBAD00593884 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		27B6F2312412DE3F00593884 /* CustomNumberPadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPadController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,15 @@
 				2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */,
 			);
 			path = HIstoryCustomCell;
+			sourceTree = "<group>";
+		};
+		2767EDB62413E66900FA84CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2767EDB72413E69900FA84CA /* UITextField+PlaceholderColor.swift */,
+				2767EDB92413E6BB00FA84CA /* UITextField+CustomNumericKeyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2791AE022403C7B2009AADC5 = {
@@ -96,6 +125,7 @@
 		2791AE222403FFBF009AADC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27B6F22C2412877F00593884 /* CustomKeyPad */,
 				279508D524084FE6001E390E /* CustomCells */,
 				2791AE142403C7B2009AADC5 /* Main.storyboard */,
 				2791AE192403C7C0009AADC5 /* LaunchScreen.storyboard */,
@@ -112,6 +142,11 @@
 				2740609324044FB200084C7B /* ComputeViewController.swift */,
 				27406095240450EE00084C7B /* HistoryViewController.swift */,
 				274060972404510400084C7B /* SettingViewController.swift */,
+				2767EDB42413A29A00FA84CA /* CompoundLoanViewController.swift */,
+				2767EDBB24146A0D00FA84CA /* SavingComputeViewController.swift */,
+				2767EDBD24146BD900FA84CA /* LoanComputeViewController.swift */,
+				2767EDBF24146C0000FA84CA /* MortgageViewController.swift */,
+				2767EDC1241471E600FA84CA /* ExchangeRateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				279508D024077877001E390E /* Compute.swift */,
+				27B6F22F2412BBAD00593884 /* RoundButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +170,7 @@
 		279508D224079DD7001E390E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2767EDB62413E66900FA84CA /* Extensions */,
 				279508D324079DF1001E390E /* ComputeViewCell.swift */,
 			);
 			path = Helper;
@@ -145,6 +182,15 @@
 				2745C544240E4D700048D704 /* HIstoryCustomCell */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		27B6F22C2412877F00593884 /* CustomKeyPad */ = {
+			isa = PBXGroup;
+			children = (
+				27B6F22D241287BD00593884 /* CustomNumberPad.xib */,
+				27B6F2312412DE3F00593884 /* CustomNumberPadController.swift */,
+			);
+			path = CustomKeyPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +256,7 @@
 				27406090240441AF00084C7B /* SplashScreen.storyboard in Resources */,
 				2791AE182403C7C0009AADC5 /* Assets.xcassets in Resources */,
 				2791AE162403C7B2009AADC5 /* Main.storyboard in Resources */,
+				27B6F22E241287BD00593884 /* CustomNumberPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,14 +267,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2767EDBE24146BD900FA84CA /* LoanComputeViewController.swift in Sources */,
 				279508D424079DF1001E390E /* ComputeViewCell.swift in Sources */,
 				2740609224044ECC00084C7B /* TabViewController.swift in Sources */,
 				2740609424044FB200084C7B /* ComputeViewController.swift in Sources */,
+				2767EDC024146C0000FA84CA /* MortgageViewController.swift in Sources */,
 				2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */,
+				2767EDC2241471E600FA84CA /* ExchangeRateViewController.swift in Sources */,
 				2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */,
+				2767EDB82413E69900FA84CA /* UITextField+PlaceholderColor.swift in Sources */,
 				27406096240450EE00084C7B /* HistoryViewController.swift in Sources */,
+				2767EDBA2413E6BB00FA84CA /* UITextField+CustomNumericKeyboard.swift in Sources */,
+				27B6F2302412BBAD00593884 /* RoundButton.swift in Sources */,
 				2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */,
+				27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */,
 				279508D124077877001E390E /* Compute.swift in Sources */,
+				2767EDB52413A29A00FA84CA /* CompoundLoanViewController.swift in Sources */,
+				2767EDBC24146A0D00FA84CA /* SavingComputeViewController.swift in Sources */,
 				274060982404510400084C7B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
