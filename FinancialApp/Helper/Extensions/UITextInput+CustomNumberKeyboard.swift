@@ -1,5 +1,5 @@
 //
-//  UITextField+CustomNumericKeyboard.swift
+//  UITextInput+CustomNumberKeyboard.swift
 //  FinancialApp
 //
 //  Created by Dilan Tharidu Sangeeth on 3/7/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-private var numericKeyboardDelegate: CustomNumberKeyboardDelegate? = nil
+private var numberKeyboardDelegate: CustomNumberKeyboardDelegate? = nil
 
 
 // MARK: - This extension can be used to make UITextFields as a part of the custom numeric keyboard.
@@ -17,10 +17,10 @@ extension UITextField: CustomNumberKeyboardDelegate {
     /// This function sets the text field as a part of numeric keyboard.
     ///
     /// - Parameter delegate: The deligate
-    func setAsNumericKeyboard(delegate: CustomNumberKeyboardDelegate?) {
+    func setAsNumberKeyboard(delegate: CustomNumberKeyboardDelegate?) {
         let numericKeyboard = CustomNumberPadController(frame: CGRect(x: 0, y: 0, width: 0, height: customNKbRecommendedHeight))
         self.inputView = numericKeyboard
-        numericKeyboardDelegate = delegate
+        numberKeyboardDelegate = delegate
         numericKeyboard.delegate = self
     }
     
@@ -31,7 +31,7 @@ extension UITextField: CustomNumberKeyboardDelegate {
             numericKeyboard.delegate = nil
         }
         self.inputView = nil
-        numericKeyboardDelegate = nil
+        numberKeyboardDelegate = nil
     }
     
     /// This function handles the numeric key press. It inserts the
@@ -40,7 +40,7 @@ extension UITextField: CustomNumberKeyboardDelegate {
     /// - Parameter key: The numeric key pressed.
     internal func numericKeyPressed(key: Int) {
         self.insertText(String(key))
-        numericKeyboardDelegate?.numericKeyPressed(key: key)
+        numberKeyboardDelegate?.numericKeyPressed(key: key)
     }
     
     
@@ -48,12 +48,12 @@ extension UITextField: CustomNumberKeyboardDelegate {
     /// from the inserted text in the text field.
     internal func numericBackspacePressed() {
         self.deleteBackward()
-        numericKeyboardDelegate?.numericBackspacePressed()
+        numberKeyboardDelegate?.numericBackspacePressed()
     }
     
     internal func numericClearPressed(){
         self.text = ""
-        numericKeyboardDelegate?.numericClearPressed()
+        numberKeyboardDelegate?.numericClearPressed()
     }
     
     
@@ -63,13 +63,13 @@ extension UITextField: CustomNumberKeyboardDelegate {
     /// - Parameter symbol: The symbol pressed.
     internal func numericSymbolPressed(symbol: String) {
         self.insertText(String(symbol))
-        numericKeyboardDelegate?.numericSymbolPressed(symbol: symbol)
+        numberKeyboardDelegate?.numericSymbolPressed(symbol: symbol)
     }
     
     
     /// This function handles the retract keboard key press. It invokes
-    /// the retractKeyPressed() method in the numericKeyboardDelegate.
+    /// the retractKeyPressed() method in the numberKeyboardDelegate.
     internal func retractKeyPressed() {
-        numericKeyboardDelegate?.retractKeyPressed()
+        numberKeyboardDelegate?.retractKeyPressed()
     }
 }

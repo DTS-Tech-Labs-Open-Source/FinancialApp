@@ -37,7 +37,8 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
+    
+        self.hideKeyboardWhenTappedAround(ViewTopConstraint: self.outerStackViewTopConstraint)
         
         if isTextFieldsEmpty() {
             
@@ -48,92 +49,30 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        princiapleAmountTxt._lightPlaceholderColor(UIColor.lightText)
-        princiapleAmountTxt.setAsNumericKeyboard(delegate: self)
+        princiapleAmountTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        princiapleAmountTxt.setAsNumberKeyboard(delegate: self)
         //
-        interestTxt._lightPlaceholderColor(UIColor.lightText)
-        interestTxt.setAsNumericKeyboard(delegate: self)
+        interestTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        interestTxt.setAsNumberKeyboard(delegate: self)
         //
-        paymentTxt._lightPlaceholderColor(UIColor.lightText)
-        paymentTxt.setAsNumericKeyboard(delegate: self)
+        paymentTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        paymentTxt.setAsNumberKeyboard(delegate: self)
         //
-        compoundsPerYearTxt._lightPlaceholderColor(UIColor.lightText)
-        compoundsPerYearTxt.setAsNumericKeyboard(delegate: self)
+        compoundsPerYearTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        compoundsPerYearTxt.setAsNumberKeyboard(delegate: self)
         //
-        paymentPerYearTxt._lightPlaceholderColor(UIColor.lightText)
-        paymentPerYearTxt.setAsNumericKeyboard(delegate: self)
+        paymentPerYearTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        paymentPerYearTxt.setAsNumberKeyboard(delegate: self)
         //
-        futureValueTxt._lightPlaceholderColor(UIColor.lightText)
-        futureValueTxt.setAsNumericKeyboard(delegate: self)
+        futureValueTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        futureValueTxt.setAsNumberKeyboard(delegate: self)
         
-        numOfPaymentsTxt._lightPlaceholderColor(UIColor.lightText)
-        numOfPaymentsTxt.setAsNumericKeyboard(delegate: self)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                                      name: UIResponder.keyboardWillShowNotification, object: nil)
+        numOfPaymentsTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        numOfPaymentsTxt.setAsNumberKeyboard(delegate: self)
+                
+         self.showKeyboardWhenTapTextField(ViewTopConstraint: outerStackViewTopConstraint, OuterStackView: outerStackView, ScrollView: scrollView)
     }
     
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-           
-           let firstResponder = self.findFirstResponder(inView: self.view)
-           
-           if firstResponder != nil {
-               activeTextField = firstResponder as! UITextField;
-               
-               var activeTextFieldSuperView = activeTextField.superview!
-               
-               if activeTextField.tag == 5 || activeTextField.tag == 6 {
-                   activeTextFieldSuperView = activeTextField.superview!.superview!
-               }
-               
-               if let info = notification.userInfo {
-                   let keyboard:CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
-                   
-                   let targetY = view.frame.size.height - keyboard.height - 15 - activeTextField.frame.size.height
-                   
-                   let initialY = outerStackView.frame.origin.y + activeTextFieldSuperView.frame.origin.y + activeTextField.frame.origin.y
-                   
-                   if initialY > targetY {
-                       let diff = targetY - initialY
-                       let targetOffsetForTopConstraint = outerStackViewTopConstraint.constant + diff
-                       self.view.layoutIfNeeded()
-                       
-                       UIView.animate(withDuration: 0.25, animations: {
-                           self.outerStackViewTopConstraint.constant = targetOffsetForTopConstraint
-                           self.view.layoutIfNeeded()
-                       })
-                   }
-                   
-                   var contentInset:UIEdgeInsets = self.scrollView.contentInset
-                   contentInset.bottom = keyboard.size.height
-                   scrollView.contentInset = contentInset
-               }
-           }
-       }
-    
-    func findFirstResponder(inView view: UIView) -> UIView? {
-        for subView in view.subviews {
-            if subView.isFirstResponder {
-                return subView
-            }
-            
-            if let recursiveSubView = self.findFirstResponder(inView: subView) {
-                return recursiveSubView
-            }
-        }
-        
-        return nil
-    }
-    @objc func keyboardWillHide() {
-        view.endEditing(true)
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            self.outerStackViewTopConstraint.constant = self.outerStackViewTopConstraintDefaultHeight
-            self.view.layoutIfNeeded()
-        })
-        
-    }
     
     func isTextFieldsEmpty() -> Bool {
            if !(princiapleAmountTxt.text?.isEmpty)! && !(interestTxt.text?.isEmpty)! &&
@@ -146,23 +85,23 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     
     
     func numericKeyPressed(key: Int) {
-        print("ede")
+        print("Numeric key \(key) pressed!")
     }
     
     func numericBackspacePressed() {
-        print("dcscd")
+        print("Backspace pressed!")
     }
     
     func numericClearPressed() {
-        print("cdcs")
+        print("Clear Text filed")
     }
     
     func numericSymbolPressed(symbol: String) {
-        print("cdsc")
+        print("Symbol \(symbol) pressed!")
     }
     
     func retractKeyPressed() {
-        print("sdcs")
+        self.hideKeyboardWhenTappedAround(ViewTopConstraint:self.outerStackViewTopConstraint)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  UITextField+PlaceholderColor.swift
+//  UITextInputView+PlaceholderColor.swift
 //  FinancialApp
 //
 //  Created by Dilan Tharidu Sangeeth on 3/7/20.
@@ -16,8 +16,8 @@ extension UITextField {
     /// This function sets the passed in color to the text field placeholder.
     ///
     /// - Parameter color: The colour to be set.
-    func _lightPlaceholderColor(_ color: UIColor) {
-        var placeholderText = ""
+    func setLightPlaceholder(_ color: UIColor , _ key : String) {
+        var placeholderText = key
         if self.placeholder != nil{
             placeholderText = self.placeholder!
         }

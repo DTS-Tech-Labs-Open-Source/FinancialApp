@@ -22,8 +22,6 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     @IBOutlet weak var paymentValueStackView: UIStackView!
     @IBOutlet weak var numberOfPayment: UITextField!
     @IBOutlet weak var numberOfPaymentStackView: UIStackView!
-    @IBOutlet weak var compoundPerYearTxt: UITextField!
-    @IBOutlet weak var compoundPerYearStackView: UIStackView!
     @IBOutlet weak var outerStackViewTopConstraint: NSLayoutConstraint!
     
     var activeTextField = UITextField()
@@ -31,10 +29,18 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     var textFieldKeyBoardGap = 20
     var keyBoardHeight:CGFloat = 0
     
+    var compoundAddedArray = [CompoundUnit]()
+    var fillTextFild = [Int]()
+    
+    let findInterestRate = [1, 2, 5]
+    let findPrinciple = [2, 3 ,5]
+    let findduration = [1, 2, 3]
+    
+    var allTextFields :[UITextField] {return [presentValueTxt, futureValuetxt , interestValueTxt , paymentValueTxt , numberOfPayment  ]}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
+        self.hideKeyboardWhenTappedAround(ViewTopConstraint: self.outerStackViewTopConstraint)
         
         if isTextFieldsEmpty() {
             self.navigationItem.rightBarButtonItem!.isEnabled = false;
@@ -45,111 +51,149 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
         super.viewWillAppear(animated)
         
         // Set Text Field Styles
-       presentValueTxt._lightPlaceholderColor(UIColor.lightText)
-       presentValueTxt.setAsNumericKeyboard(delegate: self)
-//
-       futureValuetxt._lightPlaceholderColor(UIColor.lightText)
-       futureValuetxt.setAsNumericKeyboard(delegate: self)
-//
-       interestValueTxt._lightPlaceholderColor(UIColor.lightText)
-       interestValueTxt.setAsNumericKeyboard(delegate: self)
-//
-       paymentValueTxt._lightPlaceholderColor(UIColor.lightText)
-       paymentValueTxt.setAsNumericKeyboard(delegate: self)
-//
-       numberOfPayment._lightPlaceholderColor(UIColor.lightText)
-       numberOfPayment.setAsNumericKeyboard(delegate: self)
-//
-       compoundPerYearTxt._lightPlaceholderColor(UIColor.lightText)
-       compoundPerYearTxt.setAsNumericKeyboard(delegate: self)
+      
+        presentValueTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        presentValueTxt.setAsNumberKeyboard(delegate: self)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        futureValuetxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        futureValuetxt.setAsNumberKeyboard(delegate: self)
+        
+        interestValueTxt.setLightPlaceholder(UIColor.lightText , "Anual rate %")
+        interestValueTxt.setAsNumberKeyboard(delegate: self)
+        
+        paymentValueTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
+        paymentValueTxt.setAsNumberKeyboard(delegate: self)
 
+        numberOfPayment.setLightPlaceholder(UIColor.lightText , "Year Count")
+        numberOfPayment.setAsNumberKeyboard(delegate: self)
+        
+        self.showKeyboardWhenTapTextField(ViewTopConstraint: outerStackViewTopConstraint, OuterStackView: outerStackView, ScrollView: scrollView)
+   
     }
     
-    @objc func keyboardWillShow(notification : NSNotification){
+    
+   
+    @IBAction func captureTextFieldChanges(_ sender: UITextField) {
         
-        let firstResponder = self.findFirstResponder(inView: self.view)
+        var unit: CompoundUnits?
         
-        if firstResponder != nil {
-            activeTextField = firstResponder as! UITextField;
+        switch sender.tag {
+        case Constants.TAG_NUMBER_1:
+            unit = CompoundUnits.pricipalValue
+            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+            break
+        case Constants.TAG_NUMBER_2:
+            unit = CompoundUnits.futureValue
+            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+            break
+        case Constants.TAG_NUMBER_3:
+            unit = CompoundUnits.interestRate
+            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+            break
+        case Constants.TAG_NUMBER_4:
+            unit = CompoundUnits.monthlyPayment
+            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+            break
+        case Constants.TAG_NUMBER_5:
+            unit = CompoundUnits.duration
+            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+            break
+        default:
+            print ("defult")
+        }
+
+        if unit != nil{
             
-            let activeTextFieldSuperView = activeTextField.superview!
-
-            if let info = notification.userInfo {
-                
-                let keyboard:CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
-                
-                let targetY = view.frame.size.height - keyboard.height - 15 - activeTextField.frame.size.height
-                
-                let initialY = outerStackView.frame.origin.y + activeTextFieldSuperView.frame.origin.y + activeTextField.frame.origin.y
-                
-                if initialY > targetY {
-                    let diff = targetY - initialY
-                    let targetOffsetForTopConstraint = outerStackViewTopConstraint.constant + diff
-                    self.view.layoutIfNeeded()
-                    
-                    UIView.animate(withDuration: 0.25, animations: {
-                        self.outerStackViewTopConstraint.constant = targetOffsetForTopConstraint
-                        self.view.layoutIfNeeded()
-                    })
+        }
+            
+    }
+    
+    func storeAndInitilizeArrys(tag : Int , textField: UITextField , unit: CompoundUnits) -> Void{
+        if let input = textField.text{
+            if input.isEmpty {
+                self.navigationItem.rightBarButtonItem!.isEnabled = false;
+                clearTextFields(tag : tag)
+            }else{
+                if fillTextFild.isEmpty {
+                        fillTextFild.append(tag)
+                    compoundAddedArray += [CompoundUnit(tagValue : tag , textField : textField , unit: unit)]
+                }else{
+                    if fillTextFild.contains(tag) {
+                        compoundAddedArray.filter{ $0.tagValue == tag }.first?.textField = textField
+                        checkUnitComplete()
+                    }else{
+                        fillTextFild.append(tag)
+                        compoundAddedArray += [CompoundUnit(tagValue : tag , textField : textField , unit: unit)]
+                        checkUnitComplete()
+                    }
                 }
-                
-                var contentInset:UIEdgeInsets = self.scrollView.contentInset
-                contentInset.bottom = keyboard.size.height
-                scrollView.contentInset = contentInset
-
             }
         }
-        
     }
     
-    func findFirstResponder(inView view: UIView) -> UIView? {
-          for subView in view.subviews {
-              if subView.isFirstResponder {
-                  return subView
-              }
-              
-              if let recursiveSubView = self.findFirstResponder(inView: subView) {
-                  return recursiveSubView
-              }
-          }
-          
-          return nil
-      }
-    
-    @objc func keyboardWillHide() {
-        view.endEditing(true)
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            self.outerStackViewTopConstraint.constant = self.outerStackViewTopConstraintDefaultHeight
-            self.view.layoutIfNeeded()
-        })
+    func checkUnitComplete(){
+        if fillTextFild.count >= Constants.TAG_NUMBER_3 {
+            //updateTextFields()
+            self.navigationItem.rightBarButtonItem!.isEnabled = true;
+            
+            if fillTextFild.containsSameElements(as : findInterestRate){
+                let calCompoundUnit = CompoundInvest(value: compoundAddedArray)
+                
+                let re = calCompoundUnit.convert(unit: CompoundUnits.interestRate)
+                for itm in re {
+                    let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
+                    
+                    let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
+                    
+                    textfiled.text = String(roundedResult)
+                }
+                
+                print(re)
+            }else if fillTextFild.containsSameElements(as : findPrinciple){
+                print("find Principle")
+            }else if fillTextFild.containsSameElements(as : findduration){
+                print("find duration")
+            }
+        }else{
+            print("not complete")
+        }
+    }
+      
+    func mapTextAreawithUnit(unit: CompoundUnits) -> UITextField {
+         var textField = presentValueTxt
+         switch unit {
+         case .pricipalValue:
+             textField = presentValueTxt
+         case .futureValue:
+             textField = futureValuetxt
+         case .duration:
+             textField = numberOfPayment
+         case .monthlyPayment:
+             textField = paymentValueTxt
+         case .interestRate:
+             textField = interestValueTxt
+         }
+         return textField!
+     }
+    func clearTextFields(tag : Int) {
+        if fillTextFild.contains(tag){
+            fillTextFild.remove(element: tag)
+            if let indx = compoundAddedArray.firstIndex(where: { $0.tagValue == tag }){
+                compoundAddedArray.remove(at: indx)
+            }
+        }
     }
     
     func isTextFieldsEmpty() -> Bool {
            if !(presentValueTxt.text?.isEmpty)! && !(futureValuetxt.text?.isEmpty)! &&
                !(interestValueTxt.text?.isEmpty)! && !(paymentValueTxt.text?.isEmpty)! &&
-               !(numberOfPayment.text?.isEmpty)! && !(compoundPerYearTxt.text?.isEmpty)! {
+               !(numberOfPayment.text?.isEmpty)! {
                return false
            }
            return true
        }
     
-    /// This function clears all the text fields
-       func clearTextFields() {
-           presentValueTxt.text = ""
-           futureValuetxt.text = ""
-           interestValueTxt.text = ""
-           paymentValueTxt.text = ""
-           numberOfPayment.text = ""
-           compoundPerYearTxt.text = ""
-       }
-       
-    
     func numericKeyPressed(key: Int) {
-        print("nnnii")
         print("Numeric key \(key) pressed!")
     }
     
@@ -159,6 +203,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     }
     
     func numericClearPressed(){
+        print("Clear Text filed")
 //        clearTextFields()
     }
     
@@ -168,7 +213,8 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     }
     
     func retractKeyPressed() {
-        keyboardWillHide()
+        self.hideKeyboard(ViewTopConstraint: self.outerStackViewTopConstraint)
+        
     }
     
     
