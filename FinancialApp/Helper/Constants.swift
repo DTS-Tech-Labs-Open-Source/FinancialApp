@@ -18,5 +18,12 @@ public class Constants{
     
     
     static let INTEREST_UNIT_TIME = 12
+    static let COMPOUND_USER_DEFAULTS_KEY = "compound"
+    static let SAVEING_USER_DEFAULTS_KEY = "saving"
+    static let LOAN_USER_DEFAULTS_KEY = "loan"
+    static let MORTGAGE_USER_DEFAULTS_KEY = "mortgage"
+    
+    static let USER_SAVE_MAX_DEFAULTS_COUNT = 5
+    
     
 }

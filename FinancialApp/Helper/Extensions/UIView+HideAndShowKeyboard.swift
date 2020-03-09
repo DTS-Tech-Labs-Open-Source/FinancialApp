@@ -12,29 +12,24 @@ private var outerConstraint : NSLayoutConstraint? = nil
 private var textFieldActive = UITextField()
 private var outerStackView : UIStackView? = nil
 private var scrollView : UIScrollView? = nil
+private let outerStackViewTopConstraintDefaultHeight: CGFloat = 17.0
 
 extension UIViewController {
     
     
-    func hideKeyboardWhenTappedAround(ViewTopConstraint: NSLayoutConstraint) {
+    
+    func hideKeyboardWhenTappedAround() {
         
-        outerConstraint = ViewTopConstraint
-           let tapGesture = UITapGestureRecognizer(target: self,
-                                                   action: #selector(hideKeyboard(ViewTopConstraint:)))
-           view.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                   action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
        }
        
-    @objc func hideKeyboard(ViewTopConstraint: NSLayoutConstraint) {
-        
-        let outerStackViewTopConstraintDefaultHeight: CGFloat = 17.0
+    @objc func hideKeyboard() {
           
         view.endEditing(true)
         
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            ViewTopConstraint.constant = outerStackViewTopConstraintDefaultHeight
-                 self.view.layoutIfNeeded()
-             })
        }
     
     

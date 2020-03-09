@@ -30,7 +30,7 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     @IBOutlet weak var numOfPaymentStakView: UIStackView!
     
     var activeTextField = UITextField()
-    var outerStackViewTopConstraintDefaultHeight: CGFloat = 17.0
+    var outerStackViewTopConstraintDefaultHeight: CGFloat = 20.0
     var textFieldKeyBoardGap = 20
     var keyBoardHeight:CGFloat = 0
     
@@ -38,7 +38,7 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.hideKeyboardWhenTappedAround(ViewTopConstraint: self.outerStackViewTopConstraint)
+        self.hideKeyboardWhenTappedAround()
         
         if isTextFieldsEmpty() {
             
@@ -84,6 +84,7 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
        }
     
     
+    
     func numericKeyPressed(key: Int) {
         print("Numeric key \(key) pressed!")
     }
@@ -101,7 +102,12 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     }
     
     func retractKeyPressed() {
-        self.hideKeyboardWhenTappedAround(ViewTopConstraint:self.outerStackViewTopConstraint)
+        self.hideKeyboard()
+        
+        UIView.animate(withDuration: 0.25, animations: {
+                  self.outerStackViewTopConstraint.constant = self.outerStackViewTopConstraintDefaultHeight
+                  self.view.layoutIfNeeded()
+              })
     }
     
 }

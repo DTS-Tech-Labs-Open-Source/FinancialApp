@@ -86,7 +86,7 @@ struct CompoundInvest {
         
         paymentPerMonth = Double(future) / Double(Double(duration) * Double(Constants.INTEREST_UNIT_TIME))
         
-        output.append(FinalCompound(value: interest, unit: CompoundUnits.interestRate))
+        output.append(FinalCompound(value: interest , unit: CompoundUnits.interestRate))
         output.append(FinalCompound(value: paymentPerMonth , unit: CompoundUnits.monthlyPayment))
         
         return output

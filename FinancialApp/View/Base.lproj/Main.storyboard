@@ -178,7 +178,11 @@
                         <viewLayoutGuide key="safeArea" id="WGE-hA-eWz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Compond Loan" id="ejv-H2-F3n">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="iXU-89-GcD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="iXU-89-GcD">
+                            <connections>
+                                <action selector="triggerSaveActionButton:" destination="1dS-lu-XyO" id="8mc-JB-mfy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="futureValueStackView" destination="5Hi-eJ-kuW" id="YBE-0p-fFv"/>
@@ -188,7 +192,7 @@
                         <outlet property="numberOfPayment" destination="Xho-D0-78p" id="VoL-H1-P4G"/>
                         <outlet property="numberOfPaymentStackView" destination="TwU-bs-Ec4" id="2KW-yB-i56"/>
                         <outlet property="outerStackView" destination="fE6-Dt-SVB" id="jPZ-Nb-ydq"/>
-                        <outlet property="outerStackViewTopConstraint" destination="YJK-vj-RW1" id="H6D-Dy-LIC"/>
+                        <outlet property="outerStackViewTopConstraint" destination="XXF-LO-rJ1" id="pVR-jJ-u6Z"/>
                         <outlet property="paymentValueStackView" destination="DrR-QK-kln" id="Dq8-Fw-K1i"/>
                         <outlet property="paymentValueTxt" destination="NJh-3q-K4W" id="8by-pP-339"/>
                         <outlet property="presentValueStackView" destination="VyM-Tj-O7F" id="Muc-Hx-Pi2"/>
@@ -402,21 +406,21 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="AcR-hu-uYU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="compoundPerYearStakView" destination="Kbg-Ks-xIa" id="rcp-jF-I8y"/>
+                        <outlet property="compoundPerYearStakView" destination="Kbg-Ks-xIa" id="37S-Va-W5e"/>
                         <outlet property="compoundsPerYearTxt" destination="naD-fx-uvn" id="ezQ-4O-o00"/>
-                        <outlet property="futureValueStakView" destination="8n0-Oz-qQ2" id="tV2-50-Cr4"/>
+                        <outlet property="futureValueStakView" destination="8n0-Oz-qQ2" id="ia8-Pb-PxL"/>
                         <outlet property="futureValueTxt" destination="0DX-9t-23Q" id="DS8-Ab-tOm"/>
-                        <outlet property="interestStakView" destination="ohW-sC-Umc" id="2GB-p2-yRG"/>
+                        <outlet property="interestStakView" destination="ohW-sC-Umc" id="eda-lh-k2J"/>
                         <outlet property="interestTxt" destination="kCE-Af-F8h" id="by9-wt-FhE"/>
-                        <outlet property="numOfPaymentStakView" destination="3Z6-po-YbM" id="flF-ab-Mub"/>
+                        <outlet property="numOfPaymentStakView" destination="3Z6-po-YbM" id="uW0-Rg-Won"/>
                         <outlet property="numOfPaymentsTxt" destination="c5v-pF-cjO" id="3Zb-bp-D1c"/>
                         <outlet property="outerStackView" destination="tft-Hp-eqn" id="h9g-U1-trR"/>
-                        <outlet property="outerStackViewTopConstraint" destination="1DE-o3-Ci5" id="jdk-a9-Ope"/>
-                        <outlet property="paymentPerYearStakView" destination="l17-ra-Gys" id="dI6-bg-Ldz"/>
+                        <outlet property="outerStackViewTopConstraint" destination="ePv-Qs-0vZ" id="2Xk-Ja-INa"/>
+                        <outlet property="paymentPerYearStakView" destination="l17-ra-Gys" id="cr5-QJ-HGK"/>
                         <outlet property="paymentPerYearTxt" destination="dDt-dI-Kqn" id="fZL-bC-qfY"/>
-                        <outlet property="paymentStakView" destination="Yi7-m2-iSH" id="lPg-t0-HjL"/>
+                        <outlet property="paymentStakView" destination="Yi7-m2-iSH" id="6Rg-z6-j72"/>
                         <outlet property="paymentTxt" destination="Zmf-MU-sqv" id="oKn-dm-qje"/>
-                        <outlet property="princiapleAmountStakView" destination="1Z6-bp-vCR" id="ylo-50-KqQ"/>
+                        <outlet property="princiapleAmountStakView" destination="1Z6-bp-vCR" id="kJg-Ug-6pf"/>
                         <outlet property="princiapleAmountTxt" destination="Uzs-0i-XcN" id="bdA-8y-hmD"/>
                         <outlet property="scrollView" destination="eae-W8-eVm" id="7uJ-al-aCV"/>
                     </connections>
@@ -944,6 +948,9 @@
                                     <segment title="Exchange"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <connections>
+                                    <action selector="changeSegment:" destination="ntR-4L-71n" eventType="valueChanged" id="y4R-tn-hf6"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-dO-ak9">
                                 <rect key="frame" x="0.0" y="163" width="414" height="601"/>
@@ -975,9 +982,17 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="History" id="vE5-yK-UfD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="gpf-2b-3GR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="gpf-2b-3GR">
+                            <connections>
+                                <action selector="deleteSaveHistory:" destination="ntR-4L-71n" id="hE8-xV-2Ff"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segmentView" destination="SHb-6t-YCi" id="SBm-tk-jah"/>
+                        <outlet property="tableView" destination="GaS-dO-ak9" id="874-f4-7jN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qa-4r-RRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,7 +25,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     @IBOutlet weak var outerStackViewTopConstraint: NSLayoutConstraint!
     
     var activeTextField = UITextField()
-    var outerStackViewTopConstraintDefaultHeight: CGFloat = 17.0
+    var outerStackViewTopConstraintDefaultHeight: CGFloat = 20.0
     var textFieldKeyBoardGap = 20
     var keyBoardHeight:CGFloat = 0
     
@@ -40,7 +40,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround(ViewTopConstraint: self.outerStackViewTopConstraint)
+        self.hideKeyboardWhenTappedAround()
         
         if isTextFieldsEmpty() {
             self.navigationItem.rightBarButtonItem!.isEnabled = false;
@@ -77,38 +77,70 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
         
         var unit: CompoundUnits?
         
-        switch sender.tag {
-        case Constants.TAG_NUMBER_1:
-            unit = CompoundUnits.pricipalValue
-            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
-            break
-        case Constants.TAG_NUMBER_2:
-            unit = CompoundUnits.futureValue
-            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
-            break
-        case Constants.TAG_NUMBER_3:
-            unit = CompoundUnits.interestRate
-            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
-            break
-        case Constants.TAG_NUMBER_4:
-            unit = CompoundUnits.monthlyPayment
-            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
-            break
-        case Constants.TAG_NUMBER_5:
-            unit = CompoundUnits.duration
-            storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
-            break
-        default:
-            print ("defult")
-        }
-
-        if unit != nil{
+    
+            switch sender.tag {
+                   case Constants.TAG_NUMBER_1:
+                       unit = CompoundUnits.pricipalValue
+                       storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+                       break
+                   case Constants.TAG_NUMBER_2:
+                       unit = CompoundUnits.futureValue
+                       storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+                       break
+                   case Constants.TAG_NUMBER_3:
+                       unit = CompoundUnits.interestRate
+                       storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+                       break
+                   case Constants.TAG_NUMBER_4:
+                       unit = CompoundUnits.monthlyPayment
+                       storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+                       break
+                   case Constants.TAG_NUMBER_5:
+                       unit = CompoundUnits.duration
+                       storeAndInitilizeArrys(tag: sender.tag, textField: sender , unit: unit!)
+                       break
+                   default:
+                       print ("defult")
+                   }
+       
+    }
+    
+    @IBAction func triggerSaveActionButton(_ sender: UIBarButtonItem) {
+        
+        if !isTextFieldsEmpty(){
             
-        }
+            let compoundBoady = "\(presentValueTxt.text!) Principal | \(futureValuetxt.text!) Future Value | \(interestValueTxt.text!) % Interest |  \(paymentValueTxt.text!) Per Month | = \(numberOfPayment.text!) Num Of Pay"
             
+            var arr = UserDefaults.standard.array(forKey: Constants.COMPOUND_USER_DEFAULTS_KEY) as? [String] ?? []
+            
+            if arr.count >= Constants.USER_SAVE_MAX_DEFAULTS_COUNT {
+                arr = Array(arr.suffix(Constants.USER_SAVE_MAX_DEFAULTS_COUNT - 1))
+            }
+            
+            arr.append(compoundBoady)
+            UserDefaults.standard.set(arr, forKey: Constants.COMPOUND_USER_DEFAULTS_KEY)
+            let alert = UIAlertController(title: "Success", message: "The Compound Computation was successully saved!", preferredStyle: UIAlertController.Style.alert)
+                       alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+             self.present(alert, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Error", message: "You are trying to save an empty Computation!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+    func clearTextFields() {
+        paymentValueTxt.text = ""
+        futureValuetxt.text = ""
+        presentValueTxt.text = ""
+        interestValueTxt.text = ""
+        numberOfPayment.text = ""
     }
     
     func storeAndInitilizeArrys(tag : Int , textField: UITextField , unit: CompoundUnits) -> Void{
+
         if let input = textField.text{
             if input.isEmpty {
                 self.navigationItem.rightBarButtonItem!.isEnabled = false;
@@ -120,42 +152,59 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
                 }else{
                     if fillTextFild.contains(tag) {
                         compoundAddedArray.filter{ $0.tagValue == tag }.first?.textField = textField
-                        checkUnitComplete()
+                        checkUnitComplete(unit: unit)
                     }else{
                         fillTextFild.append(tag)
                         compoundAddedArray += [CompoundUnit(tagValue : tag , textField : textField , unit: unit)]
-                        checkUnitComplete()
+                        checkUnitComplete(unit: unit)
                     }
                 }
             }
         }
     }
     
-    func checkUnitComplete(){
+    func checkUnitComplete(unit: CompoundUnits){
+        
+        
         if fillTextFild.count >= Constants.TAG_NUMBER_3 {
             //updateTextFields()
+            let calCompoundUnit = CompoundInvest(value: compoundAddedArray)
+            
             self.navigationItem.rightBarButtonItem!.isEnabled = true;
             
             if fillTextFild.containsSameElements(as : findInterestRate){
-                let calCompoundUnit = CompoundInvest(value: compoundAddedArray)
                 
                 let re = calCompoundUnit.convert(unit: CompoundUnits.interestRate)
-                for itm in re {
-                    let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
-                    
-                    let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
-                    
-                    textfiled.text = String(roundedResult)
-                }
+                updateTextFields(res: re, unit: unit)
                 
-                print(re)
             }else if fillTextFild.containsSameElements(as : findPrinciple){
-                print("find Principle")
+                
+                let re = calCompoundUnit.convert(unit: CompoundUnits.pricipalValue)
+                updateTextFields(res: re, unit: unit)
+                
             }else if fillTextFild.containsSameElements(as : findduration){
-                print("find duration")
+               
+                let re = calCompoundUnit.convert(unit: CompoundUnits.duration)
+                updateTextFields(res: re, unit: unit)
+                
             }
+            
+            // need to find full amount after request period
         }else{
             print("not complete")
+        }
+    }
+    
+    func updateTextFields(res : [FinalCompound] , unit : CompoundUnits) -> Void {
+        for itm in res {
+            if itm.getUnit() == unit {
+                continue
+            }
+            let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
+            
+            let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
+            
+            textfiled.text = String(roundedResult)
         }
     }
       
@@ -213,7 +262,12 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     }
     
     func retractKeyPressed() {
-        self.hideKeyboard(ViewTopConstraint: self.outerStackViewTopConstraint)
+        self.hideKeyboard()
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.outerStackViewTopConstraint.constant = self.outerStackViewTopConstraintDefaultHeight
+            self.view.layoutIfNeeded()
+        })
         
     }
     
