@@ -26,4 +26,10 @@ public class Constants{
     
     static let USER_SAVE_MAX_DEFAULTS_COUNT = 5
     
+    static let ACCESS_KEY = "c8dd86141cf6d6e21dd02ca4ec8a0373"
+    static let FIXER_BASE_URL = "http://data.fixer.io/api"
+    static let FIXER_GET_COUNTIES_URL = "symbols"
+    static let FIXER_GET_CURRENCY_URL = "latest"
+
+    
 }

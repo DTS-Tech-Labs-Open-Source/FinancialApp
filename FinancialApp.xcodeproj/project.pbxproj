@@ -14,6 +14,8 @@
 		274060982404510400084C7B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274060972404510400084C7B /* SettingViewController.swift */; };
 		2743BB89241A667F0093E1B7 /* HttpAdapterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */; };
 		2743BB8B241C22A10093E1B7 /* CheckInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */; };
+		2743BB8F241D272F0093E1B7 /* CuncurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB8E241D272F0093E1B7 /* CuncurrencyService.swift */; };
+		2743BB91241D580C0093E1B7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB90241D580C0093E1B7 /* Country.swift */; };
 		27451FA2241749D000B24823 /* LoanInvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA1241749D000B24823 /* LoanInvest.swift */; };
 		27451FA4241750D100B24823 /* LoanUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA3241750D100B24823 /* LoanUnit.swift */; };
 		27451FA6241750E200B24823 /* FinalLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA5241750E200B24823 /* FinalLoan.swift */; };
@@ -61,6 +63,8 @@
 		274060972404510400084C7B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAdapterService.swift; sourceTree = "<group>"; };
 		2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetConnection.swift; sourceTree = "<group>"; };
+		2743BB8E241D272F0093E1B7 /* CuncurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuncurrencyService.swift; sourceTree = "<group>"; };
+		2743BB90241D580C0093E1B7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		27451FA1241749D000B24823 /* LoanInvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInvest.swift; sourceTree = "<group>"; };
 		27451FA3241750D100B24823 /* LoanUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanUnit.swift; sourceTree = "<group>"; };
 		27451FA5241750E200B24823 /* FinalLoan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalLoan.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				27451FA5241750E200B24823 /* FinalLoan.swift */,
 				27451FA92417872100B24823 /* SavingUnit.swift */,
 				27451FAB2417873500B24823 /* FinalSaving.swift */,
+				2743BB90241D580C0093E1B7 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			children = (
 				2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */,
 				2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */,
+				2743BB8E241D272F0093E1B7 /* CuncurrencyService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				274F05F42416E2D6001611D4 /* SaveHistoryViewCellController.swift in Sources */,
 				27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */,
 				279508D124077877001E390E /* Compute.swift in Sources */,
+				2743BB91241D580C0093E1B7 /* Country.swift in Sources */,
 				2767EDCC2415A1C400FA84CA /* CompoundUnit.swift in Sources */,
 				2743BB8B241C22A10093E1B7 /* CheckInternetConnection.swift in Sources */,
 				274F05F824171288001611D4 /* MortgageUnit.swift in Sources */,
@@ -372,6 +379,7 @@
 				2767EDBC24146A0D00FA84CA /* SavingComputeViewController.swift in Sources */,
 				274060982404510400084C7B /* SettingViewController.swift in Sources */,
 				2767EDCA2415906B00FA84CA /* CompoundInvest.swift in Sources */,
+				2743BB8F241D272F0093E1B7 /* CuncurrencyService.swift in Sources */,
 				2767EDC624152A2300FA84CA /* UIView+HideAndShowKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

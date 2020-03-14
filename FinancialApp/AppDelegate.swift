@@ -18,15 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Thread.sleep(forTimeInterval: 3.0)
 
-        let url = URL(string: "https://api.darksky.net/forecast/bb00f087fe08c8cedadc06e1fda108d7/37.8267,-122.4233")!
-//        let httpServerAdapter = HttpAdapterService(url: url)
-        HttpAdapterService(url: url).downloanJSONFromURL { (result) in
-            print(result)
-        }
-//        httpServerAdapter.downloanJSONFromURL { (result) in
-//            print(result)
-//        }
         // Override point for customization after application launch.
+       
+    
         return true
     }
 
