@@ -19,6 +19,7 @@ private let pressedKeyColour = UIColor(red: 50/255, green: 50/255, blue: 50/255,
     func numericKeyPressed(key: Int)
     func numericBackspacePressed()
     func numericClearPressed()
+    func numericAllClearPressed()
     func numericSymbolPressed(symbol: String)
     func retractKeyPressed()
 }
@@ -39,6 +40,7 @@ class CustomNumberPadController: UIView {
     @IBOutlet weak var butKeyDot: RoundButton!
     @IBOutlet weak var butKeyBackPress: RoundButton!
     @IBOutlet weak var butKeyClear: RoundButton!
+    @IBOutlet weak var allClearPress: RoundButton!
     @IBOutlet weak var butKeyHidePad: UIButton!
     
      var allButtons: [UIButton] { return [butKey0, butKey1, butKey2, butKey3, butKey4, butKey5, butKey6, butKey7, butKey8, butKey9, butKeyDot, butKeyMinus] }
@@ -100,6 +102,10 @@ class CustomNumberPadController: UIView {
     
     @IBAction func handleBackspaceButtonPress(_ sender: AnyObject) {
         self.delegate?.numericBackspacePressed()
+    }
+    
+    @IBAction func handleAllClearBurronPress(_ sender: UIButton) {
+        self.delegate?.numericAllClearPressed()
     }
     
     @IBAction func handleClearButtonPress(_ sender: UIButton) {

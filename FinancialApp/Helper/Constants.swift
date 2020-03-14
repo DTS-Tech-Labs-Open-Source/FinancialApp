@@ -22,8 +22,8 @@ public class Constants{
     static let SAVEING_USER_DEFAULTS_KEY = "saving"
     static let LOAN_USER_DEFAULTS_KEY = "loan"
     static let MORTGAGE_USER_DEFAULTS_KEY = "mortgage"
+    static let EXCHANGE_RATE_USER_DEFAULTS_KEY = "exchange"
     
     static let USER_SAVE_MAX_DEFAULTS_COUNT = 5
-    
     
 }

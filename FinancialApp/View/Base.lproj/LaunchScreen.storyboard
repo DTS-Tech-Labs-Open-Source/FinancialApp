@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xvJ-X8-fXi">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <rect key="frame" x="107" y="244" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="4O1-xD-vff"/>
-                                    <constraint firstAttribute="height" constant="150" id="q7R-9Y-7yp"/>
+                                    <constraint firstAttribute="width" constant="200" id="4O1-xD-vff"/>
+                                    <constraint firstAttribute="height" constant="200" id="q7R-9Y-7yp"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-Js-FfE">
@@ -36,26 +36,34 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finacial Calculater" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHp-JF-gVN">
+                                <rect key="frame" x="134" y="454" width="146.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RVz-Js-FfE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CbB-Yf-Ke9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RVz-Js-FfE" secondAttribute="bottom" constant="8" id="GJv-i7-9Ge"/>
                             <constraint firstItem="xvJ-X8-fXi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Oqv-QO-SfW"/>
+                            <constraint firstItem="UHp-JF-gVN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wtv-1c-k9v"/>
+                            <constraint firstItem="UHp-JF-gVN" firstAttribute="top" secondItem="xvJ-X8-fXi" secondAttribute="bottom" constant="10" id="Ypn-oo-Y7T"/>
+                            <constraint firstItem="xvJ-X8-fXi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="jse-8n-uIL"/>
                             <constraint firstItem="eur-5i-JiL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sJK-cK-htn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eur-5i-JiL" secondAttribute="bottom" constant="80" id="svD-If-vKU"/>
-                            <constraint firstItem="xvJ-X8-fXi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xjY-52-cvM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="-657" y="408"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AppLogo" width="888" height="834"/>
+        <image name="AppLogo" width="2400" height="3000"/>
         <image name="MyLogo" width="160" height="54"/>
     </resources>
 </document>

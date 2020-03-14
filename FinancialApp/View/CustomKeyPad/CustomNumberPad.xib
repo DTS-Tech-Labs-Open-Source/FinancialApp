@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNumberPadController" customModule="FinancialApp" customModuleProvider="target">
             <connections>
+                <outlet property="allClearPress" destination="lmL-pd-ofh" id="gIa-wi-edc"/>
                 <outlet property="butKey0" destination="TYv-oL-Tly" id="hsl-kk-5LE"/>
                 <outlet property="butKey1" destination="xx9-7B-hkD" id="YWt-Uo-uXS"/>
                 <outlet property="butKey2" destination="l1a-bI-UzC" id="xxJ-G1-11Z"/>
@@ -345,6 +346,25 @@
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="handleBackspaceButtonPress:" destination="-1" eventType="touchUpInside" id="cOs-Fp-LsU"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmL-pd-ofh" customClass="RoundButton" customModule="FinancialApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="75" width="60" height="60"/>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="2Nl-no-wDD"/>
+                                                                <constraint firstAttribute="height" constant="60" id="pP2-G7-46n"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <inset key="imageEdgeInsets" minX="10" minY="15" maxX="15" maxY="15"/>
+                                                            <state key="normal" title="AC">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="handleAllClearBurronPress:" destination="-1" eventType="touchUpInside" id="BFy-Vo-fTr"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-9O-1OC" customClass="RoundButton" customModule="FinancialApp" customModuleProvider="target">

@@ -164,38 +164,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D4E8FB9A-0692-4DC3-8315-51BCAB804B2D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E90B028-7D3B-4C5F-954C-F656660C9C1A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/View/CustomKeyPad/CustomNumberPadController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "handleClearButtonPress(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "51FB6EB8-6BF8-4B7D-A277-9A017740E322"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -212,223 +180,187 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "08E6E3B3-5C0D-4FE8-A1A4-120528EB771E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "triggerSaveActionButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FCA95E87-6024-4443-B977-A1776994B820"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "triggerSaveActionButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A790C5B2-B6A7-4D5C-9487-DED454567E01"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "calculateInteretRate(future:duration:principal:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "94D46B57-0FA5-4CFE-B295-89751F5300CA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "calculateInteretRate(future:duration:principal:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DB528065-11B8-4E52-9BEE-5EFCA5594585"
+            uuid = "A3CF4DA5-340B-4A0A-A0D6-AA00EEFF48D5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FinancialApp/Calculations/CompoundInvest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "calculateInteretRate(future:duration:principal:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "convert(unit:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "53D92AE6-D2A9-4DA1-B0E7-70BD29C14E94"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "captureTextFieldChanges(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "15660218-C771-43B2-B207-C87D02965E8F"
+            uuid = "64539E69-06C1-4B18-BAF9-68E323917C4A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/View/CustomKeyPad/CustomNumberPadController.swift"
+            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "handleSymbolButtonPress(_:)"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "calculateFutureValue(duration:principal:interest:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "14D62860-0688-4C5E-933A-3A245048B180"
+            uuid = "31AF95CA-4F65-41B2-BC13-A67EA10D2CCF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "triggerSaveActionButton(_:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "convert(unit:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "617956FB-4836-49BB-96BC-12535137E539"
+            uuid = "AD717A41-FDEA-4FFE-8A6B-98409E3092AE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "triggerSaveActionButton(_:)"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "calculateFutureValue(duration:principal:interest:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "10D8E785-39B2-4F0C-8F6F-4F6EC9012502"
+            uuid = "046AC63A-1A6C-49BD-8109-EC0C7A82A57E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "triggerSaveActionButton(_:)"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "calculateFutureValue(duration:principal:interest:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "10956445-68B7-4ECA-A33D-5ACAE5103FDC"
-            shouldBeEnabled = "No"
+            uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Controller/LoanComputeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "CompoundLoanViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "115D6826-DAE0-44EE-BD6C-E8CD9FC4631F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "triggerSaveActionButton(_:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "triggerTextFieldChanges(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "115D6826-DAE0-44EE-BD6C-E8CD9FC4631F - c16a9aa1b45e79d0"
-                  shouldBeEnabled = "No"
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "FinancialApp.CompoundLoanViewController.storeAndInitilizeArrys(tag: Swift.Int, textField: __C.UITextField, unit: FinancialApp.CompoundUnits) -&gt; ()"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
                   moduleName = "FinancialApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/CompoundLoanViewController.swift"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "2160">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "115D6826-DAE0-44EE-BD6C-E8CD9FC4631F - 1f992af58c7baab"
-                  shouldBeEnabled = "No"
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (FinancialApp.CompoundUnit) -&gt; Swift.Bool in FinancialApp.CompoundLoanViewController.storeAndInitilizeArrys(tag: Swift.Int, textField: __C.UITextField, unit: FinancialApp.CompoundUnits) -&gt; ()"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
                   moduleName = "FinancialApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/CompoundLoanViewController.swift"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "36">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "744">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -436,160 +368,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3E46527F-73E6-43AA-9C36-97826878D450"
+            uuid = "5CD90850-CC4D-4018-9939-1769E67BE7BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinancialApp/Controller/LoanComputeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "storeAndInitilizeArrys(tag:textField:unit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B87CA14B-B750-4C83-86ED-99CBB2A78A90"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Services/HttpAdapterService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "storeAndInitilizeArrys(tag:textField:unit:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(url:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2DA7B3CC-58F4-4B1F-B2DA-D35FA882B6AB"
-            shouldBeEnabled = "Yes"
+            uuid = "107792C7-8E53-40FD-8AD6-1B9324269672"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Services/HttpAdapterService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "storeAndInitilizeArrys(tag:textField:unit:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "downloanJSONFromURL(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F84296AD-9917-416E-B320-D238703C5880"
-            shouldBeEnabled = "Yes"
+            uuid = "DA566CCC-01DE-4823-A2F2-FC4A02736E77"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Services/HttpAdapterService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "triggerSaveActionButton(_:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "downloanJSONFromURL(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BFDB1D57-A129-4E6E-BBFF-0BB20D97957F"
-            shouldBeEnabled = "Yes"
+            uuid = "DFB554CD-FF93-4933-8D77-D4AC5D428659"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Services/HttpAdapterService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "storeAndInitilizeArrys(tag:textField:unit:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "downloanJSONFromURL(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DFB554CD-FF93-4933-8D77-D4AC5D428659 - 9074c5fd6d5f926f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.HttpAdapterService.downloanJSONFromURL((Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Services/HttpAdapterService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "DFB554CD-FF93-4933-8D77-D4AC5D428659 - e4f915644a479cf1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FinancialApp.HttpAdapterService.downloanJSONFromURL((Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Services/HttpAdapterService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3BD0BEA-9266-482A-905E-D1DFD3999F95"
-            shouldBeEnabled = "Yes"
+            uuid = "2D9E8D18-A831-450D-A9FC-1C28DA1B39BE"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Controller/CompoundLoanViewController.swift"
+            filePath = "FinancialApp/Controller/ExchangeRateViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "triggerSaveActionButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A7CBF44E-0BBA-468E-8222-2E56F3FC9346"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "init(value:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1423C4D6-CC37-4C04-AE29-6453A3483283"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "convert(unit:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0838CA2D-5C7D-4CFD-A754-54CEEBD24AD1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "convert(unit:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1B14F3F1-4E0E-477E-8E5E-65F756385DB6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "convert(unit:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62A97C81-75B8-410F-BBDE-9C1162EA6430"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialApp/Calculations/CompoundInvest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "convert(unit:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,10 +12,22 @@
 		2740609424044FB200084C7B /* ComputeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740609324044FB200084C7B /* ComputeViewController.swift */; };
 		27406096240450EE00084C7B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27406095240450EE00084C7B /* HistoryViewController.swift */; };
 		274060982404510400084C7B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274060972404510400084C7B /* SettingViewController.swift */; };
+		2743BB89241A667F0093E1B7 /* HttpAdapterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */; };
+		2743BB8B241C22A10093E1B7 /* CheckInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */; };
+		27451FA2241749D000B24823 /* LoanInvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA1241749D000B24823 /* LoanInvest.swift */; };
+		27451FA4241750D100B24823 /* LoanUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA3241750D100B24823 /* LoanUnit.swift */; };
+		27451FA6241750E200B24823 /* FinalLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA5241750E200B24823 /* FinalLoan.swift */; };
+		27451FA82417707E00B24823 /* SavingInvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA72417707E00B24823 /* SavingInvest.swift */; };
+		27451FAA2417872100B24823 /* SavingUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FA92417872100B24823 /* SavingUnit.swift */; };
+		27451FAC2417873500B24823 /* FinalSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27451FAB2417873500B24823 /* FinalSaving.swift */; };
 		2745C546240E4DB90048D704 /* HistoryGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */; };
 		2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */; };
 		274F05F02416BF07001611D4 /* SavedHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05EF2416BF07001611D4 /* SavedHistory.swift */; };
 		274F05F22416C23C001611D4 /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05F12416C23C001611D4 /* UITableView+EmptyView.swift */; };
+		274F05F42416E2D6001611D4 /* SaveHistoryViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05F32416E2D6001611D4 /* SaveHistoryViewCellController.swift */; };
+		274F05F6241710D2001611D4 /* MortgageInvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05F5241710D2001611D4 /* MortgageInvest.swift */; };
+		274F05F824171288001611D4 /* MortgageUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05F724171288001611D4 /* MortgageUnit.swift */; };
+		274F05FA24171320001611D4 /* FinalMortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F05F924171320001611D4 /* FinalMortgage.swift */; };
 		2767EDB52413A29A00FA84CA /* CompoundLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB42413A29A00FA84CA /* CompoundLoanViewController.swift */; };
 		2767EDB82413E69900FA84CA /* UITextInputView+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB72413E69900FA84CA /* UITextInputView+PlaceholderColor.swift */; };
 		2767EDBA2413E6BB00FA84CA /* UITextInput+CustomNumberKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767EDB92413E6BB00FA84CA /* UITextInput+CustomNumberKeyboard.swift */; };
@@ -47,10 +59,22 @@
 		2740609324044FB200084C7B /* ComputeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeViewController.swift; sourceTree = "<group>"; };
 		27406095240450EE00084C7B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		274060972404510400084C7B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAdapterService.swift; sourceTree = "<group>"; };
+		2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetConnection.swift; sourceTree = "<group>"; };
+		27451FA1241749D000B24823 /* LoanInvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInvest.swift; sourceTree = "<group>"; };
+		27451FA3241750D100B24823 /* LoanUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanUnit.swift; sourceTree = "<group>"; };
+		27451FA5241750E200B24823 /* FinalLoan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalLoan.swift; sourceTree = "<group>"; };
+		27451FA72417707E00B24823 /* SavingInvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingInvest.swift; sourceTree = "<group>"; };
+		27451FA92417872100B24823 /* SavingUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingUnit.swift; sourceTree = "<group>"; };
+		27451FAB2417873500B24823 /* FinalSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSaving.swift; sourceTree = "<group>"; };
 		2745C545240E4DB90048D704 /* HistoryGroupCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGroupCellView.xib; sourceTree = "<group>"; };
 		2745C547240E4DE50048D704 /* HistoryGroupCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGroupCellViewController.swift; sourceTree = "<group>"; };
 		274F05EF2416BF07001611D4 /* SavedHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedHistory.swift; sourceTree = "<group>"; };
 		274F05F12416C23C001611D4 /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
+		274F05F32416E2D6001611D4 /* SaveHistoryViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistoryViewCellController.swift; sourceTree = "<group>"; };
+		274F05F5241710D2001611D4 /* MortgageInvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageInvest.swift; sourceTree = "<group>"; };
+		274F05F724171288001611D4 /* MortgageUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageUnit.swift; sourceTree = "<group>"; };
+		274F05F924171320001611D4 /* FinalMortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMortgage.swift; sourceTree = "<group>"; };
 		2767EDB42413A29A00FA84CA /* CompoundLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLoanViewController.swift; sourceTree = "<group>"; };
 		2767EDB72413E69900FA84CA /* UITextInputView+PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextInputView+PlaceholderColor.swift"; sourceTree = "<group>"; };
 		2767EDB92413E6BB00FA84CA /* UITextInput+CustomNumberKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextInput+CustomNumberKeyboard.swift"; sourceTree = "<group>"; };
@@ -114,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				2767EDC92415906B00FA84CA /* CompoundInvest.swift */,
+				274F05F5241710D2001611D4 /* MortgageInvest.swift */,
+				27451FA1241749D000B24823 /* LoanInvest.swift */,
+				27451FA72417707E00B24823 /* SavingInvest.swift */,
 			);
 			path = Calculations;
 			sourceTree = "<group>";
@@ -175,6 +202,7 @@
 				2767EDBD24146BD900FA84CA /* LoanComputeViewController.swift */,
 				2767EDBF24146C0000FA84CA /* MortgageViewController.swift */,
 				2767EDC1241471E600FA84CA /* ExchangeRateViewController.swift */,
+				274F05F32416E2D6001611D4 /* SaveHistoryViewCellController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,6 +215,12 @@
 				2767EDCB2415A1C400FA84CA /* CompoundUnit.swift */,
 				2767EDD124165E7700FA84CA /* FinalCompound.swift */,
 				274F05EF2416BF07001611D4 /* SavedHistory.swift */,
+				274F05F724171288001611D4 /* MortgageUnit.swift */,
+				274F05F924171320001611D4 /* FinalMortgage.swift */,
+				27451FA3241750D100B24823 /* LoanUnit.swift */,
+				27451FA5241750E200B24823 /* FinalLoan.swift */,
+				27451FA92417872100B24823 /* SavingUnit.swift */,
+				27451FAB2417873500B24823 /* FinalSaving.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +228,8 @@
 		2791AE2524040050009AADC5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2743BB88241A667F0093E1B7 /* HttpAdapterService.swift */,
+				2743BB8A241C22A10093E1B7 /* CheckInternetConnection.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,6 +337,8 @@
 			files = (
 				2767EDBE24146BD900FA84CA /* LoanComputeViewController.swift in Sources */,
 				279508D424079DF1001E390E /* ComputeViewCell.swift in Sources */,
+				27451FA2241749D000B24823 /* LoanInvest.swift in Sources */,
+				274F05F6241710D2001611D4 /* MortgageInvest.swift in Sources */,
 				2740609224044ECC00084C7B /* TabViewController.swift in Sources */,
 				2740609424044FB200084C7B /* ComputeViewController.swift in Sources */,
 				2767EDC024146C0000FA84CA /* MortgageViewController.swift in Sources */,
@@ -311,15 +349,25 @@
 				2767EDC2241471E600FA84CA /* ExchangeRateViewController.swift in Sources */,
 				2745C548240E4DE50048D704 /* HistoryGroupCellViewController.swift in Sources */,
 				2767EDC42415247200FA84CA /* Array+RemoveDuplicates.swift in Sources */,
+				27451FAC2417873500B24823 /* FinalSaving.swift in Sources */,
 				2767EDB82413E69900FA84CA /* UITextInputView+PlaceholderColor.swift in Sources */,
 				27406096240450EE00084C7B /* HistoryViewController.swift in Sources */,
 				2767EDBA2413E6BB00FA84CA /* UITextInput+CustomNumberKeyboard.swift in Sources */,
 				2767EDD224165E7700FA84CA /* FinalCompound.swift in Sources */,
 				27B6F2302412BBAD00593884 /* RoundButton.swift in Sources */,
+				27451FA4241750D100B24823 /* LoanUnit.swift in Sources */,
+				27451FAA2417872100B24823 /* SavingUnit.swift in Sources */,
+				27451FA6241750E200B24823 /* FinalLoan.swift in Sources */,
+				2743BB89241A667F0093E1B7 /* HttpAdapterService.swift in Sources */,
 				2791AE0F2403C7B2009AADC5 /* AppDelegate.swift in Sources */,
+				274F05F42416E2D6001611D4 /* SaveHistoryViewCellController.swift in Sources */,
 				27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */,
 				279508D124077877001E390E /* Compute.swift in Sources */,
 				2767EDCC2415A1C400FA84CA /* CompoundUnit.swift in Sources */,
+				2743BB8B241C22A10093E1B7 /* CheckInternetConnection.swift in Sources */,
+				274F05F824171288001611D4 /* MortgageUnit.swift in Sources */,
+				274F05FA24171320001611D4 /* FinalMortgage.swift in Sources */,
+				27451FA82417707E00B24823 /* SavingInvest.swift in Sources */,
 				2767EDB52413A29A00FA84CA /* CompoundLoanViewController.swift in Sources */,
 				2767EDBC24146A0D00FA84CA /* SavingComputeViewController.swift in Sources */,
 				274060982404510400084C7B /* SettingViewController.swift in Sources */,

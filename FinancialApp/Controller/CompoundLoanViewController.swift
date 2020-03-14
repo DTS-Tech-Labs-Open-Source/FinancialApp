@@ -35,6 +35,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     let findInterestRate = [1, 2, 5]
     let findPrinciple = [2, 3 ,5]
     let findduration = [1, 2, 3]
+    let findFututerVal = [1 , 3 ,5]
     
     var allTextFields :[UITextField] {return [presentValueTxt, futureValuetxt , interestValueTxt , paymentValueTxt , numberOfPayment  ]}
     
@@ -72,6 +73,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
     }
     
     
+    
    
     @IBAction func captureTextFieldChanges(_ sender: UITextField) {
         
@@ -105,6 +107,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
        
     }
     
+
     @IBAction func triggerSaveActionButton(_ sender: UIBarButtonItem) {
         
         if !isTextFieldsEmpty(){
@@ -130,14 +133,6 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
         
     }
     
-    
-    func clearTextFields() {
-        paymentValueTxt.text = ""
-        futureValuetxt.text = ""
-        presentValueTxt.text = ""
-        interestValueTxt.text = ""
-        numberOfPayment.text = ""
-    }
     
     func storeAndInitilizeArrys(tag : Int , textField: UITextField , unit: CompoundUnits) -> Void{
 
@@ -187,9 +182,10 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
                 let re = calCompoundUnit.convert(unit: CompoundUnits.duration)
                 updateTextFields(res: re, unit: unit)
                 
+            }else if fillTextFild.containsSameElements(as : findFututerVal){
+                let re = calCompoundUnit.convert(unit: CompoundUnits.futureValue)
+                updateTextFields(res: re, unit: unit)
             }
-            
-            // need to find full amount after request period
         }else{
             print("not complete")
         }
@@ -200,9 +196,14 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
             if itm.getUnit() == unit {
                 continue
             }
+            
             let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
             
             let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
+            
+            if !compoundAddedArray.contains(where: { $0.unit == itm.getUnit() }){
+                textfiled.isUserInteractionEnabled = false
+            }
             
             textfiled.text = String(roundedResult)
         }
@@ -224,6 +225,7 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
          }
          return textField!
      }
+    
     func clearTextFields(tag : Int) {
         if fillTextFild.contains(tag){
             fillTextFild.remove(element: tag)
@@ -232,6 +234,8 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
             }
         }
     }
+    
+
     
     func isTextFieldsEmpty() -> Bool {
            if !(presentValueTxt.text?.isEmpty)! && !(futureValuetxt.text?.isEmpty)! &&
@@ -261,6 +265,10 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
 
     }
     
+    func numericAllClearPressed() {
+        clearAllTextFields()
+    }
+    
     func retractKeyPressed() {
         self.hideKeyboard()
         
@@ -271,6 +279,22 @@ class CompoundLoanViewController : UIViewController , CustomNumberKeyboardDelega
         
     }
     
-    
+    func clearAllTextFields() {
+        presentValueTxt.text = ""
+        futureValuetxt.text = ""
+        interestValueTxt.text = ""
+        paymentValueTxt.text = ""
+        numberOfPayment.text = ""
+        
+        compoundAddedArray.removeAll()
+        fillTextFild.removeAll()
+        
+        self.navigationItem.rightBarButtonItem!.isEnabled = false;
+        
+        for row in allTextFields {
+            row.isUserInteractionEnabled = true
+        }
+        
+    }
     
 }

@@ -72,4 +72,8 @@ extension UITextField: CustomNumberKeyboardDelegate {
     internal func retractKeyPressed() {
         numberKeyboardDelegate?.retractKeyPressed()
     }
+    
+    internal func numericAllClearPressed() {
+        numberKeyboardDelegate?.numericAllClearPressed()
+    }
 }
