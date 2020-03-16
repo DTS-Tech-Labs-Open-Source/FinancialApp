@@ -939,13 +939,18 @@
                         <viewLayoutGuide key="safeArea" id="ohi-sb-CV0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Exchange Rate" id="7Kr-Kb-lGu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ku8-uA-Qu3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ku8-uA-Qu3">
+                            <connections>
+                                <action selector="saveButtonAction:" destination="Wba-EY-9fJ" id="kgZ-N8-CpL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="countrySelectOne" destination="udz-A4-yNj" id="p8q-jk-t1F"/>
                         <outlet property="countrySelectTwo" destination="KVo-Qm-VnW" id="G5Y-Oz-Fge"/>
                         <outlet property="currencyFirstInput" destination="X0t-1a-D8z" id="Vd5-ab-psu"/>
                         <outlet property="currencySeconInput" destination="gHz-Zx-JVk" id="K6H-yu-TWP"/>
+                        <outlet property="saveButt" destination="Ku8-uA-Qu3" id="6Bm-Xr-7SJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRe-bF-D1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

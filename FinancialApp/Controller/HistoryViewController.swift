@@ -96,7 +96,16 @@ class HistoryViewController: UIViewController ,UITableViewDataSource,UITableView
         
         // generate the gistory and reload the table
         generateHistory(type: computationType, icon: icon)
-        DispatchQueue.main.async { self.tableView.reloadData() }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            
+            if self.histories.count > 0 {
+                self.navigationItem.rightBarButtonItem!.isEnabled = true;
+            }else{
+                self.navigationItem.rightBarButtonItem!.isEnabled = false;
+            }
+            
+        }
     }
     
 
@@ -110,13 +119,18 @@ class HistoryViewController: UIViewController ,UITableViewDataSource,UITableView
             
             // refetch hitory and reload table
             generateHistory(type: computationType, icon: icon)
-            DispatchQueue.main.async{ self.tableView.reloadData() }
-            
-            if histories.count > 0 {
-                self.navigationItem.rightBarButtonItem!.isEnabled = true;
-            }else{
-                self.navigationItem.rightBarButtonItem!.isEnabled = false;
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+                
+                if self.histories.count > 0 {
+                    self.navigationItem.rightBarButtonItem!.isEnabled = true;
+                }else{
+                    self.navigationItem.rightBarButtonItem!.isEnabled = false;
+                }
+                
             }
+            
+            
         }
     }
     

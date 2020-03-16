@@ -14,6 +14,8 @@ class ExchangeRateViewController: UIViewController , UIPickerViewDelegate , UIPi
     @IBOutlet weak var currencySeconInput: UITextField!
     @IBOutlet weak var countrySelectOne: UIPickerView!
     @IBOutlet weak var countrySelectTwo: UIPickerView!
+    @IBOutlet weak var saveButt: UIBarButtonItem!
+    
     
     var countryArry = [Country]()
     var rateArray = [CurrencyRateUnit]()
@@ -72,6 +74,41 @@ class ExchangeRateViewController: UIViewController , UIPickerViewDelegate , UIPi
         
     }
     
+    
+    @IBAction func saveButtonAction(_ sender: UIBarButtonItem) {
+        
+        if !isTextFieldsEmpty(){
+                   
+            let compoundBoady = "\(currencyFirstInput.text!) :  \(String(describing: fisrtCountry?.getCountryName()))  | \(currencySeconInput.text!) : \(String(describing: secoundCountry?.getCountryName())) "
+                   
+                   var arr = UserDefaults.standard.array(forKey: Constants.EXCHANGE_RATE_USER_DEFAULTS_KEY) as? [String] ?? []
+                   
+                   if arr.count >= Constants.USER_SAVE_MAX_DEFAULTS_COUNT {
+                       arr = Array(arr.suffix(Constants.USER_SAVE_MAX_DEFAULTS_COUNT - 1))
+                   }
+                   
+                   arr.append(compoundBoady)
+                   UserDefaults.standard.set(arr, forKey: Constants.EXCHANGE_RATE_USER_DEFAULTS_KEY)
+                   let alert = UIAlertController(title: "Success", message: "The Compound Computation was successully saved!", preferredStyle: UIAlertController.Style.alert)
+                              alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+               }else{
+                   let alert = UIAlertController(title: "Error", message: "You are trying to save an empty Computation!", preferredStyle: UIAlertController.Style.alert)
+                   alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                   self.present(alert, animated: true, completion: nil)
+               }
+        
+    }
+    
+    
+    func isTextFieldsEmpty() -> Bool {
+           if !(currencyFirstInput.text?.isEmpty)! && !(currencySeconInput.text?.isEmpty)!{
+               return false
+           }
+           return true
+       }
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -79,6 +116,19 @@ class ExchangeRateViewController: UIViewController , UIPickerViewDelegate , UIPi
     
     @IBAction func captureTextChanges(_ sender: UITextField) {
         
+        switch sender.tag {
+        case Constants.TAG_NUMBER_1:
+            let inputDou = (sender.text! as NSString).doubleValue
+            let dub =  converter(firCode: (self.fisrtCountry?.getCountryCode())!, secCode: (self.secoundCountry?.getCountryCode())!, value: inputDou)
+            self.currencySeconInput.text = "\(dub)"
+            
+        case Constants.TAG_NUMBER_2:
+            let inputDou = (sender.text! as NSString).doubleValue
+            let dub = converter(firCode: (self.secoundCountry?.getCountryCode())!, secCode: (self.fisrtCountry?.getCountryCode())!, value: inputDou)
+            self.currencyFirstInput.text = "\(dub)"
+        default:
+            print("default")
+        }
         
     }
     
