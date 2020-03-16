@@ -822,7 +822,6 @@
         <!--ExchangeRate-->
         <scene sceneID="hOs-K7-MIJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MRe-bF-D1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="ExchangeRate" id="Wba-EY-9fJ" customClass="ExchangeRateViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZI-ky-yHZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -849,6 +848,9 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="captureTextChanges:" destination="Wba-EY-9fJ" eventType="editingChanged" id="m2e-qG-lkj"/>
+                                                                </connections>
                                                             </textField>
                                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udz-A4-yNj">
                                                                 <rect key="frame" x="0.0" y="78" width="319" height="130"/>
@@ -882,6 +884,9 @@
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="captureTextChanges:" destination="Wba-EY-9fJ" eventType="editingChanged" id="DZQ-N3-xQz"/>
+                                                                </connections>
                                                             </textField>
                                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVo-Qm-VnW">
                                                                 <rect key="frame" x="0.0" y="78" width="319" height="130"/>
@@ -943,6 +948,7 @@
                         <outlet property="currencySeconInput" destination="gHz-Zx-JVk" id="K6H-yu-TWP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRe-bF-D1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630.43478260869574" y="2382.5892857142858"/>
         </scene>

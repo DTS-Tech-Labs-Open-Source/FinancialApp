@@ -47,9 +47,35 @@ class CuncurrencyService{
             print("somthing worng with URL")
             compltion(nil)
         }
+    }
+    
+    func getCurrencyRate(_ response: @escaping([CurrencyRateUnit]?) -> Void){
         
+        var currencyRateList = [CurrencyRateUnit]()
         
-//        return countryList
+        if let countryURL = URL(string: "\(currencyBaseURL!)/\(Constants.FIXER_GET_CURRENCY_URL)?\(currencyAPIKey)"){
+            
+            if CheckInternetConnection.connection(){
+                let httpReqest = HttpAdapterService.init(url: countryURL)
+                httpReqest.downloanJSONFromURL { (jsonResponse) in
+                    if let rates = jsonResponse?["rates"] as? [String:Any]{
+                        for cu in rates {
+                            if let n = cu.value as? NSNumber{
+                                currencyRateList += [CurrencyRateUnit(code: cu.key , value: n.doubleValue)]
+                            }
+//                            currencyRateList += [CurrencyRateUnit(code: cu.key , value: cu.value)]
+//                            print(cu)
+                        }
+                                      
+                        response(currencyRateList)
+                    }
+                }
+            }
+            
+        }else{
+            print("somthing worng with URL")
+            response(nil)
+        }
     }
 
 }

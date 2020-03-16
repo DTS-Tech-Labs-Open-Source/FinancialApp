@@ -43,7 +43,7 @@ class HistoryViewController: UIViewController ,UITableViewDataSource,UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if histories.count == 0 {
-            self.tableView.triggerEmptyMessage("No saved conversions found")
+            self.tableView.triggerEmptyMessage("No saved computation found !")
         } else {
             self.tableView.restore()
         }

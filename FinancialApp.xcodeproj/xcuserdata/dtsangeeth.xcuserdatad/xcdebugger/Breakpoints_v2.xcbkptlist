@@ -271,6 +271,98 @@
             endingLineNumber = "87"
             landmarkName = "triggerTextFieldChanges(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "A6ED8B27-5DF2-47CA-AA5A-DD487E1004ED - 49180e8ab4e5eeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinancialApp.LoanComputeViewController.triggerTextFieldChanges(__C.UITextField) -&gt; ()"
+                  moduleName = "FinancialApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtsangeeth/Desktop/Projects/Financial-Cal-App/FinancialApp/FinancialApp/Controller/LoanComputeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "744">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -395,9 +487,41 @@
             filePath = "FinancialApp/Controller/ExchangeRateViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6C223AE-327F-4A88-904D-9A02FDDA112D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinancialApp/Services/CuncurrencyService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getCurrencyRate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B81A4FC8-59AE-45B7-9D21-AF48CB544E60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinancialApp/Services/CuncurrencyService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getCountryList(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
