@@ -8,6 +8,11 @@ This is a financial app for the iPhone . The app shall have the capability of un
     <p align="center" style="font-size: 1.2rem;">A conceptual implementation of a Financial Compute  App for the iPhone.</p>
 </p>
 
+#Screen
+
+<img src="./Docs/readme-resources/screen.jpg"
+alt="App Screenshots">
+
 # Built With
 
 <a href="https://swift.org/"><img src="./Docs/readme-resources/swift-logo.svg" alt="swift" height="40" /></a>&nbsp;&nbsp;
