@@ -7,3 +7,11 @@ This is a financial app for the iPhone . The app shall have the capability of un
     <h1 align="center">Financial Compute  App</h1>
     <p align="center" style="font-size: 1.2rem;">A conceptual implementation of a Financial Compute  App for the iPhone.</p>
 </p>
+
+# Built With
+
+<a href="https://swift.org/"><img src="./docs/readme-resources/swift-logo.svg" alt="swift" height="40" /></a>&nbsp;&nbsp;
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
