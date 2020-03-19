@@ -54,6 +54,8 @@
 		27B6F22E241287BD00593884 /* CustomNumberPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B6F22D241287BD00593884 /* CustomNumberPad.xib */; };
 		27B6F2302412BBAD00593884 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6F22F2412BBAD00593884 /* RoundButton.swift */; };
 		27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6F2312412DE3F00593884 /* CustomNumberPadController.swift */; };
+		27BF5BC82420983B0036DD83 /* HelpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF5BC72420983B0036DD83 /* HelpViewCell.swift */; };
+		27BF5BCA24209C4D0036DD83 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF5BC924209C4D0036DD83 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		27B6F22D241287BD00593884 /* CustomNumberPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNumberPad.xib; sourceTree = "<group>"; };
 		27B6F22F2412BBAD00593884 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		27B6F2312412DE3F00593884 /* CustomNumberPadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPadController.swift; sourceTree = "<group>"; };
+		27BF5BC72420983B0036DD83 /* HelpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewCell.swift; sourceTree = "<group>"; };
+		27BF5BC924209C4D0036DD83 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,8 @@
 				27451FAB2417873500B24823 /* FinalSaving.swift */,
 				2743BB90241D580C0093E1B7 /* Country.swift */,
 				278D6EC6241E4F5E00450AB5 /* CurrencyRateUnit.swift */,
+				27BF5BC72420983B0036DD83 /* HelpViewCell.swift */,
+				27BF5BC924209C4D0036DD83 /* Help.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				2767EDC024146C0000FA84CA /* MortgageViewController.swift in Sources */,
 				2791AE132403C7B2009AADC5 /* SplashView.swift in Sources */,
 				274F05F22416C23C001611D4 /* UITableView+EmptyView.swift in Sources */,
+				27BF5BCA24209C4D0036DD83 /* Help.swift in Sources */,
 				2767EDCE24161D4800FA84CA /* Constants.swift in Sources */,
 				274F05F02416BF07001611D4 /* SavedHistory.swift in Sources */,
 				2767EDC2241471E600FA84CA /* ExchangeRateViewController.swift in Sources */,
@@ -373,6 +380,7 @@
 				274F05F42416E2D6001611D4 /* SaveHistoryViewCellController.swift in Sources */,
 				27B6F2322412DE3F00593884 /* CustomNumberPadController.swift in Sources */,
 				279508D124077877001E390E /* Compute.swift in Sources */,
+				27BF5BC82420983B0036DD83 /* HelpViewCell.swift in Sources */,
 				2743BB91241D580C0093E1B7 /* Country.swift in Sources */,
 				2767EDCC2415A1C400FA84CA /* CompoundUnit.swift in Sources */,
 				2743BB8B241C22A10093E1B7 /* CheckInternetConnection.swift in Sources */,

@@ -134,6 +134,7 @@ struct MortgageInvest {
          }
         
         interestV = Double(12 * x * 100)
+        fullPayment = monthPay * duration * Double(Constants.INTEREST_UNIT_TIME)
         output.append(FinalMortgage(value: interestV, unit: MortgageUnits.interestRate))
         output.append(FinalMortgage(value: fullPayment, unit: MortgageUnits.fullPayment))
         
@@ -156,7 +157,7 @@ struct MortgageInvest {
         let st4 = st1 * pow((st1 + Double(1)), st2)
         
         loanAmountV = st3 / st4
-        
+        fullPayment = monthPay * duration * Double(Constants.INTEREST_UNIT_TIME)
         output.append(FinalMortgage(value: loanAmountV, unit: MortgageUnits.loanAmount))
         output.append(FinalMortgage(value: fullPayment, unit: MortgageUnits.fullPayment))
        
@@ -166,6 +167,9 @@ struct MortgageInvest {
     
     func calculateMonthlyPayment(loanAmount:Double , interest: Double , duration: Double) -> [FinalMortgage]{
          //  let answer: Double = (P * ( R/t * pow((1 + R/t), (n*t)))) / ( pow((1 + R/t), (n*t)) - 1 )
+//        M = P[r(1+r)^n/((1+r)^n)-1)]
+
+
         var monthPayV :Double = 0.0
         var output = [FinalMortgage]()
         var fullPayment : Double = 0.0
@@ -180,8 +184,10 @@ struct MortgageInvest {
         let st4 = pow((Double(1) + st1), st2) - Double(1)
         
         monthPayV = st3 / st4
+        fullPayment = monthPayV * duration * Double(Constants.INTEREST_UNIT_TIME)
         output.append(FinalMortgage(value: monthPayV, unit: MortgageUnits.monthlyPayment))
         output.append(FinalMortgage(value: fullPayment, unit: MortgageUnits.fullPayment))
+       
         
         return output
     }
@@ -204,6 +210,9 @@ struct MortgageInvest {
         let an = st2 - (st3 / st4)
         
         durationV = an / Double(Constants.INTEREST_UNIT_TIME)
+        
+        fullPayment = monthPay * durationV * Double(Constants.INTEREST_UNIT_TIME)
+        
         output.append(FinalMortgage(value: durationV, unit: MortgageUnits.duration))
         output.append(FinalMortgage(value: fullPayment, unit: MortgageUnits.fullPayment))
         

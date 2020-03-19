@@ -1226,13 +1226,67 @@
                     <view key="view" contentMode="scaleToFill" id="XII-i6-DDL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-JR-OeM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="Cell" rowHeight="154" id="8d3-wH-n6E" customClass="HelpViewCell" customModule="FinancialApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8d3-wH-n6E" id="gZJ-uw-Z0t">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17t-MJ-rBi">
+                                                    <rect key="frame" x="20" y="11" width="86" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SW-W5-FSd">
+                                                    <rect key="frame" x="138" y="11" width="215" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMn-k8-UEi">
+                                                    <rect key="frame" x="138" y="46" width="256" height="89"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="helpDiscripText" destination="eMn-k8-UEi" id="skd-ik-dG5"/>
+                                            <outlet property="helpImageView" destination="17t-MJ-rBi" id="9b2-2U-hYs"/>
+                                            <outlet property="helpTitleText" destination="2SW-W5-FSd" id="ISx-Cc-b51"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wpM-S0-o1h" id="LHK-qc-o1V"/>
+                                    <outlet property="delegate" destination="wpM-S0-o1h" id="4mX-K5-db9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PDb-JR-OeM" firstAttribute="leading" secondItem="99g-bB-Sbi" secondAttribute="leading" id="E1o-Gx-tZx"/>
+                            <constraint firstItem="PDb-JR-OeM" firstAttribute="trailing" secondItem="99g-bB-Sbi" secondAttribute="trailing" id="OF9-47-bWA"/>
+                            <constraint firstItem="PDb-JR-OeM" firstAttribute="bottom" secondItem="99g-bB-Sbi" secondAttribute="bottom" id="eOD-T1-22m"/>
+                            <constraint firstItem="PDb-JR-OeM" firstAttribute="top" secondItem="99g-bB-Sbi" secondAttribute="top" id="o1U-2U-wrm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="99g-bB-Sbi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="aNL-jT-9uL"/>
+                    <connections>
+                        <outlet property="tableView" destination="PDb-JR-OeM" id="WlZ-vb-GGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f83-PG-FGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445" y="1645"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="1644.6428571428571"/>
         </scene>
         <!--ComputeTabView-->
         <scene sceneID="JUG-N9-Fwr">
