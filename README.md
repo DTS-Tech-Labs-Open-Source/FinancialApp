@@ -10,7 +10,7 @@ This is a financial app for the iPhone . The app shall have the capability of un
 
 # Built With
 
-<a href="https://swift.org/"><img src="./docs/readme-resources/swift-logo.svg" alt="swift" height="40" /></a>&nbsp;&nbsp;
+<a href="https://swift.org/"><img src="./Docs/readme-resources/swift-logo.svg" alt="swift" height="40" /></a>&nbsp;&nbsp;
 
 # License
 
