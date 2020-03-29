@@ -212,7 +212,6 @@
 				2767EDBD24146BD900FA84CA /* LoanComputeViewController.swift */,
 				2767EDBF24146C0000FA84CA /* MortgageViewController.swift */,
 				2767EDC1241471E600FA84CA /* ExchangeRateViewController.swift */,
-				274F05F32416E2D6001611D4 /* SaveHistoryViewCellController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +233,7 @@
 				2743BB90241D580C0093E1B7 /* Country.swift */,
 				278D6EC6241E4F5E00450AB5 /* CurrencyRateUnit.swift */,
 				27BF5BC72420983B0036DD83 /* HelpViewCell.swift */,
+				274F05F32416E2D6001611D4 /* SaveHistoryViewCellController.swift */,
 				27BF5BC924209C4D0036DD83 /* Help.swift */,
 			);
 			path = Model;

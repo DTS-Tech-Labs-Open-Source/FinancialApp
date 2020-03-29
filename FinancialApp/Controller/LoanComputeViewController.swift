@@ -40,6 +40,7 @@ class LoanComputeViewController : UIViewController , CustomNumberKeyboardDelegat
     
     var allTextFields :[UITextField] {return [loanPrincipalAmountText, interestRateText , monthlyPaymentText , fullRepaymentText , durationText  ]}
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -199,6 +200,11 @@ class LoanComputeViewController : UIViewController , CustomNumberKeyboardDelegat
              let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
              
              let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
+            
+            if !loanAddedArray.contains(where: { $0.unit == itm.getUnit() }){
+                                textfiled.isUserInteractionEnabled = false
+            }
+                     
              
              textfiled.text = String(roundedResult)
          }
@@ -238,7 +244,7 @@ class LoanComputeViewController : UIViewController , CustomNumberKeyboardDelegat
     }
     
     func numericClearPressed() {
-        print("Clear Text filed")
+        clearAllTextFields()
     }
     
     func numericSymbolPressed(symbol: String) {
@@ -256,5 +262,23 @@ class LoanComputeViewController : UIViewController , CustomNumberKeyboardDelegat
     func numericAllClearPressed() {
           print("Clear All Text")
     }
+    
+    func clearAllTextFields() {
+          loanPrincipalAmountText.text = ""
+          interestRateText.text = ""
+          monthlyPaymentText.text = ""
+          fullRepaymentText.text = ""
+          durationText.text = ""
+          
+          loanAddedArray.removeAll()
+          fillTextFild.removeAll()
+          
+          self.navigationItem.rightBarButtonItem!.isEnabled = false;
+          
+          for row in allTextFields {
+              row.isUserInteractionEnabled = true
+          }
+          
+      }
     
 }

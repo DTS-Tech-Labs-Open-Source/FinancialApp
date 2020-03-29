@@ -175,6 +175,11 @@ class MortgageViewController: UIViewController , CustomNumberKeyboardDelegate {
             
             let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
             
+            if !mortgageAddedArray.contains(where: { $0.unit == itm.getUnit() }){
+                textfiled.isUserInteractionEnabled = false
+            }
+                        
+            
             textfiled.text = String(roundedResult)
         }
     }
@@ -238,7 +243,7 @@ class MortgageViewController: UIViewController , CustomNumberKeyboardDelegate {
      }
      
      func numericClearPressed() {
-          print("Clear Text filed")
+          clearAllTextFields()
      }
      
      func numericSymbolPressed(symbol: String) {
@@ -257,5 +262,24 @@ class MortgageViewController: UIViewController , CustomNumberKeyboardDelegate {
                     self.view.layoutIfNeeded()
                 })
      }
+    
+    
+    func clearAllTextFields() {
+            loanAmountText.text = ""
+            interestText.text = ""
+            paymentText.text = ""
+            numOfPaymentText.text = ""
+            fullPayment.text = ""
+            
+            mortgageAddedArray.removeAll()
+            fillTextFild.removeAll()
+            
+            self.navigationItem.rightBarButtonItem!.isEnabled = false;
+            
+            for row in allTextFields {
+                row.isUserInteractionEnabled = true
+            }
+            
+        }
     
 }

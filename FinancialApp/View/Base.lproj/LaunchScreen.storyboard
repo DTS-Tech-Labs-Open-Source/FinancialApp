@@ -56,10 +56,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="u1R-L3-NDv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657" y="408"/>
+            <point key="canvasLocation" x="252.17391304347828" y="407.8125"/>
         </scene>
     </scenes>
     <resources>

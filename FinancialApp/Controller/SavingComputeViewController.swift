@@ -40,6 +40,8 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     let findduration = [1, 2, 3]
     let findFututerVal = [1 , 3 ,5]
     
+        var allTextFields :[UITextField] {return [princiapleAmountTxt, interestTxt , paymentTxt , finalTotalBalanceTxt , futureValueTxt , numOfPaymentsTxt ]}
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,7 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+    
         princiapleAmountTxt.setLightPlaceholder(UIColor.lightText , "Rupees")
         princiapleAmountTxt.setAsNumberKeyboard(delegate: self)
         //
@@ -124,11 +127,11 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
                 }else{
                     if fillTextFild.contains(tag) {
                         savingAddedArray.filter{ $0.tagValue == tag }.first?.textField = textField
-                        //checkUnitComplete(unit: unit)
+                        checkUnitComplete(unit: unit)
                     }else{
                         fillTextFild.append(tag)
                         savingAddedArray += [SavingUnit(tagValue : tag , textField : textField , unit: unit)]
-                        //checkUnitComplete(unit: unit)
+                        checkUnitComplete(unit: unit)
                     }
                 }
             }
@@ -176,6 +179,10 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
             let textfiled = mapTextAreawithUnit(unit: itm.getUnit())
             
             let roundedResult = Double(round(10000 * itm.getValue()) / 10000)
+            
+            if !savingAddedArray.contains(where: { $0.unit == itm.getUnit() }){
+                       textfiled.isUserInteractionEnabled = false
+                   }
             
             textfiled.text = String(roundedResult)
         }
@@ -237,8 +244,9 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
     }
     
     func numericAllClearPressed() {
-             print("Clear All Text")
-       }
+             clearAllTextFields()
+        
+    }
     
     func retractKeyPressed() {
         self.hideKeyboard()
@@ -247,6 +255,25 @@ class SavingComputeViewController : UIViewController , CustomNumberKeyboardDeleg
                   self.outerStackViewTopConstraint.constant = self.outerStackViewTopConstraintDefaultHeight
                   self.view.layoutIfNeeded()
               })
+    }
+    
+    func clearAllTextFields() {
+        princiapleAmountTxt.text = ""
+        paymentTxt.text = ""
+        interestTxt.text = ""
+        finalTotalBalanceTxt.text = ""
+        futureValueTxt.text = ""
+        numOfPaymentsTxt.text = ""
+        
+        savingAddedArray.removeAll()
+        fillTextFild.removeAll()
+        
+        self.navigationItem.rightBarButtonItem!.isEnabled = false;
+        
+        for row in allTextFields {
+            row.isUserInteractionEnabled = true
+        }
+        
     }
     
 }

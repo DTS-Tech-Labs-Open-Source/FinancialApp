@@ -20,7 +20,7 @@ class SplashView: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        splashView.backgroundColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 1.0)
+        splashView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
         view.addSubview(splashView)
         splashView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
 
