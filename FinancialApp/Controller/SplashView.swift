@@ -41,6 +41,7 @@ class SplashView: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.scaleDownAnimation()
         }
+    
     }
     
     func scaleDownAnimation()
@@ -64,6 +65,15 @@ class SplashView: UIViewController {
     
     func removeSplashScreen() {
         splashView.removeFromSuperview()
+        
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "mainStory") as? TabViewController else {
+                print("Could not find view controller")
+                return
+            }
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 
 }

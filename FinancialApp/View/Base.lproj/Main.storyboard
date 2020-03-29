@@ -1071,7 +1071,7 @@
         <!--Tab View Controller-->
         <scene sceneID="QoS-vU-zTW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qfZ-Jq-sPh" customClass="TabViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainStory" automaticallyAdjustsScrollViewInsets="NO" id="qfZ-Jq-sPh" customClass="TabViewController" customModule="FinancialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="roO-EK-CMq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
